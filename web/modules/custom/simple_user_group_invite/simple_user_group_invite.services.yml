@@ -1,0 +1,7 @@
+services:
+  logger.channel.simple_user_group_invite:
+    parent: logger.channel_base
+    arguments: ['simple_user_group_invite']
+  simple_user_group_invite.core:
+    class: Drupal\simple_user_group_invite\SimpleUserGroupInviteCoreService
+    arguments: []

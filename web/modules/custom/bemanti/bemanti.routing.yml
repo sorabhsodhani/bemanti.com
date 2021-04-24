@@ -1,0 +1,37 @@
+bemanti.upload_matches_form:
+  path: '/upload-matches'
+  defaults:
+    _form: '\Drupal\bemanti\Form\UploadMatchesForm'
+    _title: 'UploadMatchesForm'
+  requirements:
+    _role: 'administrator'
+bemanti.user_pick_match_form:
+  path: '/view-today-matches'
+  defaults:
+    _form: '\Drupal\bemanti\Form\UserPickMatchForm'
+    _title: 'UserPickMatchForm'
+  requirements:
+    _role: 'authenticated'
+bemanti.match_bet_slip_form:
+  path: '/bet-your-points/{mid}'
+  defaults:
+    _form: '\Drupal\bemanti\Form\UserBetSlipForm'
+    _title: 'UserBetSlipForm'
+  requirements:
+    _role: 'authenticated'
+bemanti.user_bet_matches_list_controller_getMatches:
+  path: '/bet-upcoming-matches'
+  defaults:
+    _controller: '\Drupal\bemanti\Controller\UserBetMatchesListController::getMatches'
+    _title: 'Upcoming Matches'
+  requirements:
+    _role: 'authenticated'
+  options:
+    no_cache: 'TRUE'
+bemanti.bemanti_monthly_leaderboard:
+  path: '/monthly-leaderboard'
+  defaults:
+    _form: '\Drupal\bemanti\Form\MonthlyLeaderBoardForm'
+    _title: 'MonthlyLeaderBoardForm'
+  requirements:
+    _role: 'authenticated'

@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Contains simple_user_group_points.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\simple_user_group_points\SimpleUserGroupPointsService;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\user\Entity\User;
+use Drupal\simple_user_group_points\Entity\UserGroupPointsEntity;
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_help().
+ */
+function simple_user_group_points_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the simple_user_group_points module.
+    case 'help.page.simple_user_group_points':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A module that helps in allocating points per group') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+  function simple_user_group_points_entity_presave(EntityInterface $entity) {
+    $bundle = $entity->bundle();
+
+    if ($bundle == 'user_group_points') {
+      $user_field_value = $entity->get('user_id')->getValue();
+      $sid_field_value = $entity->get('user_group_id')->getValue();
+      if (!empty($user_field_value) && !empty($sid_field_value)) {
+        $uid = $user_field_value[0]['target_id'];
+        $sid = $sid_field_value[0]['target_id'];
+        $user = User::load($uid);
+        $last_balance = SimpleUserGroupPointsService::getSocietyUserBalancePoints($user, $sid);
+        $amount = $entity->get('user_group_points_amount')->value;
+        $new_balance = $amount + $last_balance;
+        $entity->set('user_group_points_balance', $new_balance);
+      }
+    }
+  }
+

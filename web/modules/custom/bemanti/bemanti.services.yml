@@ -1,0 +1,8 @@
+services:
+  bemanti.core:
+    class: Drupal\bemanti\BemantiCoreService
+  bemanti.twig.extension:
+    class: Drupal\bemanti\TwigExtension\GetUpomingMatchesTwigExtension
+    arguments: []
+    tags:
+      - { name: twig.extension }

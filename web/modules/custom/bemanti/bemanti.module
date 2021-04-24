@@ -1,0 +1,114 @@
+<?php
+
+/**
+ * @file
+ * Contains bemanti.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\user\Entity\User;
+use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
+use Drupal\bemanti\Entity\BemantiUserBetEntity;
+
+/**
+ * Implements hook_help().
+ */
+function bemanti_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the bemanti module.
+    case 'help.page.bemanti':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Bemanti Bidding Logic') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_ENTITY_insert() for user entities.
+ */
+function bemanti_user_insert($user) {
+  // Get the current user id.
+  $current_user_id = \Drupal::currentUser()->id();
+  if ($current_user_id == 0) {
+    \Drupal\transaction\Entity\Transaction::create([
+        'type' => 'userpoints_default_points',
+        'target_entity' => $user,
+        'field_userpoints_default_amount' => 100,
+        'field_userpoints_default_balance' => 0,
+      ])->execute();
+  }
+}
+
+
+function bemanti_node_update(NodeInterface $node) {
+  if ($node->bundle() == 'sl_match') {
+    $original_node = $node->original;
+    $original_home_score = $original_node->field_sl_match_score_home->value;
+    $home_score = $node->field_sl_match_score_home->value;
+    $original_away_score = $original_node->field_sl_match_score_away->value;
+    $away_score = $node->field_sl_match_score_away->value;
+    $home_team = $node->get('field_sl_match_team_home')->getValue();
+    $away_team = $node->get('field_sl_match_team_away')->getValue();
+    if (($original_home_score !=  $home_score||
+      $original_away_score != $away_score) && ($home_score != NULL && $away_score != NULL)) {
+      $query = \Drupal::entityQuery('bemanti_user_bet_entity')
+        ->condition('bemanti_user_bet_matchid',$node->id());
+      if ($home_score > $away_score) {
+        $winning_team_id = $home_team[0]['target_id'];
+        $query->condition('bemanti_user_bet_teamid',$winning_team_id);
+      }
+      else if ($home_score < $away_score) {
+         $winning_team_id = $away_team[0]['target_id'];
+         $query->condition('bemanti_user_bet_teamid',$winning_team_id);
+      }
+      else {
+        $winning_team_id = NULL;
+        $query->notExists('bemanti_user_bet_teamid');
+      }
+      $bet_ids = $query->execute();
+
+      $bets = BemantiUserBetEntity::loadMultiple($bet_ids);
+      $batch = [
+      'title' => t('Evaluating Results...'),
+      'init_message' => t('Evaluation process is starting.'),
+      'progress_message' => t('Processed @current out of @total. Estimated time: @estimate.'),
+      'error_message' => t('The process has encountered an error.'),
+    ];
+   foreach ($bets as $bet) {
+     $batch['operations'][] = [['\Drupal\bemanti\BemantiCoreService', 'evaluateMatch'], [$bet]];
+   }
+    batch_set($batch);
+    $total = count($bet_ids);
+    \Drupal::messenger()->addMessage('Evaluated ' . $total . ' bets!');
+    }
+  }
+}
+
+
+/**
+ * Implements hook_theme().
+ */
+function bemanti_theme() {
+  $account = \Drupal::currentUser()->getAccount();
+  $user_data = User::load($account->id());
+  $current_time = time();
+  $i = 0;
+  $match_query = \Drupal::entityQuery('node')->condition('type', 'sl_match');
+  $match_query->condition('field_sl_match_date', time(), '>=');
+  $match_list = $match_query->execute();
+  $variables = [];
+  foreach (array_values($match_list) as $match_id) {
+    $variables['match_form_'. $match_id] = NULL;
+  }
+  return [
+    'upcoming_matches_bet_slips_list' => [
+      'variables' => $variables,
+    ],
+  ];
+}
+

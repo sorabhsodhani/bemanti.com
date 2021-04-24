@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Contains simple_user_group_invite.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function simple_user_group_invite_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the simple_user_group_invite module.
+    case 'help.page.simple_user_group_invite':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Module that creates simple groups and methods to invite friends') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_mail().
+ */
+function simple_user_group_invite_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+
+  switch ($key) {
+    case 'invite_user':
+      $message['from'] = $params['invited_by'];
+      $message['subject'] = t('Hey! I invite you to join this interesting website. Take a look at it!', $options);
+      $message['body'][] = t('Look at this interesting website I found  at <a href="@bemanti">Bemanti</a>.', array(
+        '@bemanti' => 'https://www.bemanti.com',
+      ));
+      break;
+  }
+}

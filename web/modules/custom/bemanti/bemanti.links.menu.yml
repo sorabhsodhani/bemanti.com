@@ -1,0 +1,20 @@
+beamnti.main:
+  title: Bemanti
+  description: 'Bemanti'
+  route_name: entity.bemanti_user_bet_entity.collection
+  weight: 7
+  parent: system.admin
+
+# Bemanti user bet entity menu items definition
+entity.bemanti_user_bet_entity.collection:
+  title: 'Bemanti user bet entity list'
+  route_name: entity.bemanti_user_bet_entity.collection
+  description: 'List Bemanti user bet entity entities'
+  parent: beamnti.main
+  weight: 100
+
+bemanti_user_bet_entity.admin.structure.settings:
+  title: 'Bemanti user bet entity settings'
+  description: 'Configure Bemanti user bet entity entities'
+  route_name: bemanti_user_bet_entity.settings
+  parent: beamnti.main

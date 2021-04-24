@@ -1,0 +1,40 @@
+add user group invites entities:
+  title: 'Create new User Group Invites entities'
+
+administer user group invites entities:
+  title: 'Administer User Group Invites entities'
+  description: 'Allow to access the administration form to configure User Group Invites entities.'
+  restrict access: true
+
+delete user group invites entities:
+  title: 'Delete User Group Invites entities'
+
+edit user group invites entities:
+  title: 'Edit User Group Invites entities'
+
+view published user group invites entities:
+  title: 'View published User Group Invites entities'
+
+view unpublished user group invites entities:
+  title: 'View unpublished User Group Invites entities'
+
+add user groups entities:
+  title: 'Create new User Groups entities'
+
+administer user groups entities:
+  title: 'Administer User Groups entities'
+  description: 'Allow to access the administration form to configure User Groups entities.'
+  restrict access: true
+
+delete user groups entities:
+  title: 'Delete User Groups entities'
+
+edit user groups entities:
+  title: 'Edit User Groups entities'
+
+view published user groups entities:
+  title: 'View published User Groups entities'
+
+view unpublished user groups entities:
+  title: 'View unpublished User Groups entities'
+

@@ -1,0 +1,5 @@
+entity.bemanti_user_bet_entity.add_form:
+  route_name: entity.bemanti_user_bet_entity.add_form
+  title: 'Add Bemanti user bet entity'
+  appears_on:
+    - entity.bemanti_user_bet_entity.collection

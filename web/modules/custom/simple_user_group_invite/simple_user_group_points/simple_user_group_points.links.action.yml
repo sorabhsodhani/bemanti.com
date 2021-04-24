@@ -1,0 +1,5 @@
+entity.user_group_points.add_form:
+  route_name: entity.user_group_points.add_form
+  title: 'Add User Group points'
+  appears_on:
+    - entity.user_group_points.collection

@@ -1,0 +1,7 @@
+services:
+  logger.channel.simple_user_group_points:
+    parent: logger.channel_base
+    arguments: ['simple_user_group_points']
+  simple_user_group_points.default:
+    class: Drupal\simple_user_group_points\SimpleUserGroupPointsService
+    arguments: []

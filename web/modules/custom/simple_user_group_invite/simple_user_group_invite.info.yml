@@ -1,0 +1,5 @@
+name: 'Simple User Group and Invite'
+type: module
+description: 'Module that creates simple groups and methods to invite friends'
+core_version_requirement: ^8.8 || ^9
+package: 'User'

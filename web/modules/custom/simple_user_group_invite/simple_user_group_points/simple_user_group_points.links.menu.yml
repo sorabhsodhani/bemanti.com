@@ -1,0 +1,14 @@
+
+# User Group points menu items definition
+entity.user_group_points.collection:
+  title: 'User Group points list'
+  route_name: entity.user_group_points.collection
+  description: 'List User Group points entities'
+  parent: system.admin_structure
+  weight: 100
+
+user_group_points.admin.structure.settings:
+  title: 'User Group points settings'
+  description: 'Configure User Group points entities'
+  route_name: user_group_points.settings
+  parent: system.admin_structure

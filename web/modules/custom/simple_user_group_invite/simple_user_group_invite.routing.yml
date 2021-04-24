@@ -1,0 +1,22 @@
+simple_user_group_invite.user_grp_invite_form:
+  path: '/invite-your-group'
+  defaults:
+    _form: '\Drupal\simple_user_group_invite\Form\UserGroupInviteForm'
+    _title: 'UserGroupInviteForm'
+  requirements:
+    _role: 'authenticated'
+simple_user_group_invite.invite_accept_form:
+  path: '/invite-action/{id}'
+  defaults:
+    _form: '\Drupal\simple_user_group_invite\Form\InviteAcceptForm'
+    _title: 'InviteAcceptForm'
+  requirements:
+    _role: 'authenticated'
+
+simple_user_group_invite.pending_invites_list:
+  path: '/my-pending-invites'
+  defaults:
+    _controller: '\Drupal\simple_user_group_invite\Controller\PendingInvitesController::pendingInvites'
+    _title: 'My Pending Invites'
+  requirements:
+    _role: 'authenticated'

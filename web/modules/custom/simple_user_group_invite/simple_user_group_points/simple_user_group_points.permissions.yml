@@ -1,0 +1,20 @@
+add user group points entities:
+  title: 'Create new User Group points entities'
+
+administer user group points entities:
+  title: 'Administer User Group points entities'
+  description: 'Allow to access the administration form to configure User Group points entities.'
+  restrict access: true
+
+delete user group points entities:
+  title: 'Delete User Group points entities'
+
+edit user group points entities:
+  title: 'Edit User Group points entities'
+
+view published user group points entities:
+  title: 'View published User Group points entities'
+
+view unpublished user group points entities:
+  title: 'View unpublished User Group points entities'
+

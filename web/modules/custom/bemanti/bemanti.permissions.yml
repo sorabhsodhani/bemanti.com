@@ -1,0 +1,19 @@
+add bemanti user bet entity entities:
+  title: 'Create new Bemanti user bet entity entities'
+
+administer bemanti user bet entity entities:
+  title: 'Administer Bemanti user bet entity entities'
+  description: 'Allow to access the administration form to configure Bemanti user bet entity entities.'
+  restrict access: true
+
+delete bemanti user bet entity entities:
+  title: 'Delete Bemanti user bet entity entities'
+
+edit bemanti user bet entity entities:
+  title: 'Edit Bemanti user bet entity entities'
+
+view published bemanti user bet entity entities:
+  title: 'View published Bemanti user bet entity entities'
+
+view unpublished bemanti user bet entity entities:
+  title: 'View unpublished Bemanti user bet entity entities'

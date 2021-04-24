@@ -1,0 +1,29 @@
+
+# User Groups menu items definition
+entity.user_group.collection:
+  title: 'User Groups list'
+  route_name: entity.user_group.collection
+  description: 'List User Groups entities'
+  parent: system.admin_structure
+  weight: 100
+
+user_group.admin.structure.settings:
+  title: 'User Groups settings'
+  description: 'Configure User Groups entities'
+  route_name: user_group.settings
+  parent: system.admin_structure
+
+# User Group Invites menu items definition
+entity.user_group_invite.collection:
+  title: 'User Group Invites list'
+  route_name: entity.user_group_invite.collection
+  description: 'List User Group Invites entities'
+  parent: system.admin_structure
+  weight: 100
+
+user_group_invite.admin.structure.settings:
+  title: 'User Group Invites settings'
+  description: 'Configure User Group Invites entities'
+  route_name: user_group_invite.settings
+  parent: system.admin_structure
+
