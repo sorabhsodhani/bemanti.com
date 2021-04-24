@@ -1,0 +1,25 @@
+uuid: fa06e4ff-2348-4fa5-ae00-c5918e49710b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_stats.sl_stats_coach
+    - field.storage.sl_stats.field_sl_stats_match_perc_lost
+_core:
+  default_config_hash: JUsfYegKzC5s17SAEYjfqMRBliSU0k4lTqjUKqDjf0M
+id: sl_stats.sl_stats_coach.field_sl_stats_match_perc_lost
+field_name: field_sl_stats_match_perc_lost
+entity_type: sl_stats
+bundle: sl_stats_coach
+label: 'Percentage lost'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: float

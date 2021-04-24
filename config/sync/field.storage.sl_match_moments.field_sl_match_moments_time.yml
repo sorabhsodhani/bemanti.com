@@ -1,0 +1,23 @@
+uuid: a3b50d86-9cde-4823-89ab-b0174c7147e3
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+_core:
+  default_config_hash: 3tM_xn0Fhx7I9-3iQehui7Ye3446IJ9N2V8kVRRbaMo
+id: sl_match_moments.field_sl_match_moments_time
+field_name: field_sl_match_moments_time
+entity_type: sl_match_moments
+type: string
+settings:
+  max_length: 5
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

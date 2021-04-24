@@ -1,0 +1,11 @@
+uuid: f41069c7-b1e9-47f8-931e-ef210a207ded
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.sl_transfers
+_core:
+  default_config_hash: wNK-_NtBh0udwNUWqAB3Ebp1L8b2tS7SITVED1mxu_A
+type: sl_transfers
+name: Transfers
+description: Transfers

@@ -1,0 +1,21 @@
+uuid: 6102c842-e1a7-4eb3-8cd1-5315995fdfa0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_administrative_title
+    - node.type.sl_title
+_core:
+  default_config_hash: x7BTgMG-uVNVDaPG0OFT-JQ18U3zJSunpGwzmrXzFFs
+id: node.sl_title.field_sl_administrative_title
+field_name: field_sl_administrative_title
+entity_type: node
+bundle: sl_title
+label: 'Administrative title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

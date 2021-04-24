@@ -1,0 +1,23 @@
+uuid: cc95f325-2968-4e91-985e-1ac2f809c0e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_match_moments.sl_match_moments_yellow_card
+    - field.storage.sl_match_moments.field_sl_match_moments_des
+  module:
+    - text
+_core:
+  default_config_hash: D5mul-rjpjcYJ6tbyOdDKei5_T8JAI-nWAPat7ZzSDk
+id: sl_match_moments.sl_match_moments_yellow_card.field_sl_match_moments_des
+field_name: field_sl_match_moments_des
+entity_type: sl_match_moments
+bundle: sl_match_moments_yellow_card
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

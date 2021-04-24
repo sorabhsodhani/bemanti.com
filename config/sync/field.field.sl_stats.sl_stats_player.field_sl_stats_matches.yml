@@ -1,0 +1,25 @@
+uuid: e72b99ef-feba-44fc-922c-3d6f97da9048
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_stats.sl_stats_player
+    - field.storage.sl_stats.field_sl_stats_matches
+_core:
+  default_config_hash: 4IHY2s4nlyrZ-vRwaNc4TJHVvydmRTHS1BoZNWiQoz0
+id: sl_stats.sl_stats_player.field_sl_stats_matches
+field_name: field_sl_stats_matches
+entity_type: sl_stats
+bundle: sl_stats_player
+label: Matches
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  max: null
+  min: null
+  prefix: ''
+  suffix: ''
+field_type: integer

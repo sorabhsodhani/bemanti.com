@@ -1,0 +1,20 @@
+uuid: 7df555f0-e78d-4741-b994-73d5f42b756f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: QuYE4iLOZ1qT3FitD9M7_QlZ-o3PIRvtvUNZwpwRdgI
+id: node.field_sl_match_date
+field_name: field_sl_match_date
+entity_type: node
+type: timestamp
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

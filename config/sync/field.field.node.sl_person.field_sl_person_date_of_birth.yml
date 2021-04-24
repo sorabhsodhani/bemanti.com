@@ -1,0 +1,21 @@
+uuid: 79f02126-ad72-4489-93e7-893f4538881a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_person_date_of_birth
+    - node.type.sl_person
+_core:
+  default_config_hash: gRJnwYDMewORHUW36T-LCFdMxPsE6pGFpnghEv0TOLQ
+id: node.sl_person.field_sl_person_date_of_birth
+field_name: field_sl_person_date_of_birth
+entity_type: node
+bundle: sl_person
+label: 'Date of birth'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

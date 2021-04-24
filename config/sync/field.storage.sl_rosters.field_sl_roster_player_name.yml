@@ -1,0 +1,22 @@
+uuid: 4a228979-6d2c-4f23-a10d-e06bc2fa602e
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+    - text
+_core:
+  default_config_hash: UOD0YudvYRyNYBLWG4jH2awcFAKBKtZbeQ9zZuvqhDY
+id: sl_rosters.field_sl_roster_player_name
+field_name: field_sl_roster_player_name
+entity_type: sl_rosters
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 8fb7db44-5e91-4b77-9604-e4ab4bc39b12
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.sl_standings_rosters
+_core:
+  default_config_hash: c3u7dd7fhS3mWjnzTVnSmuHwxuOXwWGbBvLG-1-D6rk
+type: sl_standings_rosters
+name: 'Standings Rosters'
+description: 'Standings Rosters'

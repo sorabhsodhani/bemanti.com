@@ -1,0 +1,20 @@
+uuid: 9730af3e-3d42-45ac-9cd9-6fe75a216351
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+_core:
+  default_config_hash: b_WOCEaI5L2aFzvxo7px3Y4pljBEHbJLEBjIhhNuCww
+id: sl_stats.field_sl_stats_match_perc_win
+field_name: field_sl_stats_match_perc_win
+entity_type: sl_stats
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

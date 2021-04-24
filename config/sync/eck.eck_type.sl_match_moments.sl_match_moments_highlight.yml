@@ -1,0 +1,11 @@
+uuid: db7d57db-7f26-479b-aa5b-46676c338217
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.sl_match_moments
+_core:
+  default_config_hash: 5_KVUZCm-KBEZFH3sNxciKsnl_W7uSADbNC2SQRbUEQ
+type: sl_match_moments_highlight
+name: Highlight
+description: Highlight

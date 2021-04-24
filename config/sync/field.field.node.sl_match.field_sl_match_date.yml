@@ -1,0 +1,21 @@
+uuid: 94bc81a8-accc-49b4-8845-7f8a61bc6825
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_match_date
+    - node.type.sl_match
+_core:
+  default_config_hash: ByJLRf1y_9lfVL66ofOI6HSfRZ1AQFOEIUdl1GCIW0Y
+id: node.sl_match.field_sl_match_date
+field_name: field_sl_match_date
+entity_type: node
+bundle: sl_match
+label: Date
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

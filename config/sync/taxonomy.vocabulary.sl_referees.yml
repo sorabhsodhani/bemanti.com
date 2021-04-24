@@ -1,0 +1,10 @@
+uuid: fd4848fc-8cbf-4eab-937f-41d500c2bb66
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Dgoc3fdX41O-3cVeiBe5-tmpFOzCzL49J7EQgg8qCHo
+name: 'Sports League referees'
+vid: sl_referees
+description: ''
+weight: 0

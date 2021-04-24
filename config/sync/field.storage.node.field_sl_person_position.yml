@@ -1,0 +1,22 @@
+uuid: 9e150d08-17df-487b-9968-c385d9da221c
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: Ey8SkIljujwDMA6IZ1yEE4zZ9Nk1lU1f1NVRZ-cO7OI
+id: node.field_sl_person_position
+field_name: field_sl_person_position
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

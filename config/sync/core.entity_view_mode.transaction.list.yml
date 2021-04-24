@@ -1,0 +1,12 @@
+uuid: 39e7f022-cd53-47a1-8817-dd0eca16da64
+langcode: en
+status: true
+dependencies:
+  module:
+    - transaction
+_core:
+  default_config_hash: PjSey2K8ygLwANxp2iCHXvimgNY5hsYy9BCNkUy03LU
+id: transaction.list
+label: List
+targetEntityType: transaction
+cache: true

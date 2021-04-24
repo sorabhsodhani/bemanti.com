@@ -1,0 +1,12 @@
+uuid: 6b65c3e9-be6c-48af-a68c-b1d91407ede1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 4JwN5oXF86wol1VmowRKxIOyxTOAJacbtsjivB0skns
+id: sl_rosters
+label: Rosters
+created: null
+changed: null
+uid: null
+title: null

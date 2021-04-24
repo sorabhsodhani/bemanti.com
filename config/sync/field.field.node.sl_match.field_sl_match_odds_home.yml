@@ -1,0 +1,23 @@
+uuid: 2d5be3e9-276e-40d6-a20b-39e9a5ea082a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_match_odds_home
+    - node.type.sl_match
+id: node.sl_match.field_sl_match_odds_home
+field_name: field_sl_match_odds_home
+entity_type: node
+bundle: sl_match
+label: 'Home Team Odds'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

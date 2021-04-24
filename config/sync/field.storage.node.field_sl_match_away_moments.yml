@@ -1,0 +1,22 @@
+uuid: 18c989d8-f994-4884-93a0-f1a7760d0c55
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+_core:
+  default_config_hash: UcjTxhiaBwRyxiTp4ZeGr6lJ3w0C_O8naX6NrkJmWvs
+id: node.field_sl_match_away_moments
+field_name: field_sl_match_away_moments
+entity_type: node
+type: entity_reference
+settings:
+  target_type: sl_match_moments
+module: core
+locked: false
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

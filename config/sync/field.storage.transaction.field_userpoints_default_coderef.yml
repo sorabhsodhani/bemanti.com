@@ -1,0 +1,26 @@
+uuid: 742d3357-2b68-4b0b-a699-bef36e1d362b
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - userpoints_default
+  module:
+    - transaction
+_core:
+  default_config_hash: a1LMzlMncpjZMjnvarFfT3LlTM4-T4mKQeH044by8WY
+id: transaction.field_userpoints_default_coderef
+field_name: field_userpoints_default_coderef
+entity_type: transaction
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

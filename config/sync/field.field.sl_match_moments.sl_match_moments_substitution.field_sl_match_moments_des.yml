@@ -1,0 +1,23 @@
+uuid: 376f589e-b7ab-4313-b773-650d68e241aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_match_moments.sl_match_moments_substitution
+    - field.storage.sl_match_moments.field_sl_match_moments_des
+  module:
+    - text
+_core:
+  default_config_hash: cB_oVwv6uQgO1U3ijKxpe6nCjHu-gMwzSWXvgUh_Y7Q
+id: sl_match_moments.sl_match_moments_substitution.field_sl_match_moments_des
+field_name: field_sl_match_moments_des
+entity_type: sl_match_moments
+bundle: sl_match_moments_substitution
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

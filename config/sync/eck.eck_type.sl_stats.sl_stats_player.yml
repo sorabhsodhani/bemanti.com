@@ -1,0 +1,11 @@
+uuid: 087e5b7d-335a-4e3d-a5b1-c0ebb14ac1c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.sl_stats
+_core:
+  default_config_hash: hXpuhbHRukCr6P1VnrwyGOEbsw3oRjJBgvUE9RQ6RCc
+type: sl_stats_player
+name: sl_stats_player
+description: sl_stats_player

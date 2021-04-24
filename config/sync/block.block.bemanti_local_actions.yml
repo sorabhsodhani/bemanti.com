@@ -1,0 +1,20 @@
+uuid: 1b5a9090-264d-4ba0-b551-37a96a565ee4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bemanti
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: bemanti_local_actions
+theme: bemanti
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

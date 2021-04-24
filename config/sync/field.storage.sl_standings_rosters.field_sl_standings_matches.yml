@@ -1,0 +1,22 @@
+uuid: a97e1b45-ff1a-4d86-84b2-de1c824493e2
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+_core:
+  default_config_hash: HyVfUkILHxHQL5PythhHtMVbfbZruRwMx-Xn2BDEOYI
+id: sl_standings_rosters.field_sl_standings_matches
+field_name: field_sl_standings_matches
+entity_type: sl_standings_rosters
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

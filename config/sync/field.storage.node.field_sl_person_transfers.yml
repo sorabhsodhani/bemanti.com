@@ -1,0 +1,22 @@
+uuid: 5bcc38c4-0bea-4627-9c79-1d83df83f7c1
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+_core:
+  default_config_hash: Bw89Mxhr_q8Kkb62-pam8QOXQOjOFmdUV1t_TljBHxE
+id: node.field_sl_person_transfers
+field_name: field_sl_person_transfers
+entity_type: node
+type: entity_reference
+settings:
+  target_type: sl_transfers
+module: core
+locked: false
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

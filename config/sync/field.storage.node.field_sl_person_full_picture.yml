@@ -1,0 +1,32 @@
+uuid: 98accde9-db72-49ba-a9e2-235d9aa206d5
+langcode: und
+status: true
+dependencies:
+  module:
+    - file
+    - image
+    - node
+_core:
+  default_config_hash: XJu229UfgNfJ6zwKYV2DVkAxP3QsbjAxkSSGLddRNrg
+id: node.field_sl_person_full_picture
+field_name: field_sl_person_full_picture
+entity_type: node
+type: image
+settings:
+  uri_scheme: public
+  target_type: file
+  display_field: false
+  display_default: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+module: image
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

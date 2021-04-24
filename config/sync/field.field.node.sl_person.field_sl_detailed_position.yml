@@ -1,0 +1,24 @@
+uuid: 5f74dbd1-15f6-4c9b-b46c-a68221b213b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_detailed_position
+    - node.type.sl_person
+_core:
+  default_config_hash: RraG24hfMQLiX7k4O2Y-K9lB3wmA0rxP3FXmZQ1J8X0
+id: node.sl_person.field_sl_detailed_position
+field_name: field_sl_detailed_position
+entity_type: node
+bundle: sl_person
+label: 'Detailed Position'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: ''
+    _error_element: 'default_value_widget][field_sl_detailed_position][0][value'
+default_value_callback: ''
+settings: {  }
+field_type: string

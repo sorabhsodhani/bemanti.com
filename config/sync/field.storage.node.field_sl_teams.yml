@@ -1,0 +1,21 @@
+uuid: c6e2dd65-05f1-4519-9a95-faa851f5871f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: H1WXT_rYYMMQJuYw2iyKw5KIBVxuBd1QBWPJATQ8WAk
+id: node.field_sl_teams
+field_name: field_sl_teams
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

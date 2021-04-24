@@ -1,0 +1,12 @@
+uuid: 41458e7e-aac8-44b2-a5e0-13497be1eed3
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 05pkNwBRcOJJOzzOH1IOwz0sEWBSNQi2rill7cR56ag
+id: sl_transfers
+label: Transfers
+created: null
+changed: null
+uid: null
+title: null

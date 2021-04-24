@@ -1,0 +1,35 @@
+uuid: 4075583b-4046-4323-9e4d-0030078e6619
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+    - options
+_core:
+  default_config_hash: 1v9LoMM-gqTvsXgeY6WiWiyHLPSDoGVLFrGiw1x7mA4
+id: sl_transfers.field_sl_transfer_type
+field_name: field_sl_transfer_type
+entity_type: sl_transfers
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: loan
+      label: Loan
+    -
+      value: sale
+      label: Sale
+    -
+      value: free_transfer
+      label: 'Free transfer'
+    -
+      value: promotion
+      label: Promotion
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

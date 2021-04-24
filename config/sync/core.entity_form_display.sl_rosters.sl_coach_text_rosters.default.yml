@@ -1,0 +1,36 @@
+uuid: 064b389c-4e17-44fe-b33c-25dc9ea5748d
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_rosters.sl_coach_text_rosters
+    - field.field.sl_rosters.sl_coach_text_rosters.field_sl_match
+    - field.field.sl_rosters.sl_coach_text_rosters.field_sl_roster_player_name
+  module:
+    - text
+_core:
+  default_config_hash: Z0ZhMKr2o_KmE20K1uDqxxu7NYdOADyv2edz5X0gutY
+id: sl_rosters.sl_coach_text_rosters.default
+targetEntityType: sl_rosters
+bundle: sl_coach_text_rosters
+mode: default
+content:
+  field_sl_match:
+    weight: 1
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  field_sl_roster_player_name:
+    weight: 0
+    type: text_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

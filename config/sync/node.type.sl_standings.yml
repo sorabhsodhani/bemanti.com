@@ -1,0 +1,13 @@
+uuid: 7bb9bba7-fd75-4496-a60f-e7303fd933ff
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mKCPFQzQ1YnvDealSICAuEt7btjvFbDLoBsa04v2CUg
+name: Standings
+type: sl_standings
+description: 'Provides standings for competitions in Sports League'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,21 @@
+uuid: 33864e45-dfc6-4d46-a368-67429b5e5c05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_person_height
+    - node.type.sl_person
+_core:
+  default_config_hash: C7syDyOc4dCDm1wuHE2ufm0oMq_eRFsMjUhVmaw40AE
+id: node.sl_person.field_sl_person_height
+field_name: field_sl_person_height
+entity_type: node
+bundle: sl_person
+label: Height
+description: (cm)
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

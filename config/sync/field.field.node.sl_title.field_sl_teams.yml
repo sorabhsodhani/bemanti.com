@@ -1,0 +1,32 @@
+uuid: 43280b87-b1a9-4ff4-85f1-ae7dd5fd5f9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_teams
+    - node.type.sl_team
+    - node.type.sl_title
+_core:
+  default_config_hash: YJHcJzMOdtQdw_I6HYMivuURHJ9WiQM8OOaPpDNtM9M
+id: node.sl_title.field_sl_teams
+field_name: field_sl_teams
+entity_type: node
+bundle: sl_title
+label: Teams
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sl_team: sl_team
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

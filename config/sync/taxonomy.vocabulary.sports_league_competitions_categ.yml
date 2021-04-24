@@ -1,0 +1,10 @@
+uuid: 93df1e2f-912e-408a-ab3e-1bd3da335764
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CERGTZE8VRN7QntKMxOBHzXMue07nDtgvuNlGYaMJSc
+name: 'Sports league competitions categories'
+vid: sports_league_competitions_categ
+description: ''
+weight: 0

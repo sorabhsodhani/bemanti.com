@@ -1,0 +1,28 @@
+uuid: fe9f9d06-a866-4c8b-b7a6-1e200a2e15dd
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - userpoints_default
+  module:
+    - dynamic_entity_reference
+    - transaction
+    - user
+_core:
+  default_config_hash: xkdvKdsV43AkPPFxiNPcocQoRArapR-LmeJkXLN4kj4
+id: transaction.field_userpoints_default_linkref
+field_name: field_userpoints_default_linkref
+entity_type: transaction
+type: dynamic_entity_reference
+settings:
+  exclude_entity_types: false
+  entity_type_ids:
+    user: user
+module: dynamic_entity_reference
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

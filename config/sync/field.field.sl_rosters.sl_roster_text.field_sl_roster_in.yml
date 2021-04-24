@@ -1,0 +1,21 @@
+uuid: 427127e5-536e-46c3-816c-46bc88b450db
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_rosters.sl_roster_text
+    - field.storage.sl_rosters.field_sl_roster_in
+_core:
+  default_config_hash: Q0NMQemrp-6kqLvfIsEAJPL3GiL_JhouIrV18dmIwFo
+id: sl_rosters.sl_roster_text.field_sl_roster_in
+field_name: field_sl_roster_in
+entity_type: sl_rosters
+bundle: sl_roster_text
+label: 'Enter match'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

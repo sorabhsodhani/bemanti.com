@@ -1,0 +1,25 @@
+uuid: bdcf80cf-6400-41df-8f75-f19f2f623016
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_archived
+    - node.type.sl_team
+_core:
+  default_config_hash: lOflkEP3uff6JR3x899tMuwS_PY7bZBdqjIr_llFx0s
+id: node.sl_team.field_sl_archived
+field_name: field_sl_archived
+entity_type: node
+bundle: sl_team
+label: Archived
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,11 @@
+uuid: 4b55fd3b-3bd3-4080-84d2-62223353983d
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.sl_match_moments
+_core:
+  default_config_hash: oD2FeM86n2Oslow_JrBKept8SAmKxDNrNlMDTUF-4rE
+type: sl_match_moments_yellow_card
+name: 'Yellow Card'
+description: 'Yellow Card'

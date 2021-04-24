@@ -1,0 +1,56 @@
+uuid: c376385f-c2a3-4c9a-a73e-829c7d3c184b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_match_moments.sl_match_moments_red_card
+    - field.field.sl_match_moments.sl_match_moments_red_card.field_sl_match
+    - field.field.sl_match_moments.sl_match_moments_red_card.field_sl_match_moments_des
+    - field.field.sl_match_moments.sl_match_moments_red_card.field_sl_match_moments_player
+    - field.field.sl_match_moments.sl_match_moments_red_card.field_sl_match_moments_time
+  module:
+    - text
+_core:
+  default_config_hash: HM6DMvCXc_kkDs3yYYFPGb4AdnO486OgivAsOaLEw0o
+id: sl_match_moments.sl_match_moments_red_card.default
+targetEntityType: sl_match_moments
+bundle: sl_match_moments_red_card
+mode: default
+content:
+  field_sl_match:
+    weight: 8
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  field_sl_match_moments_des:
+    weight: 6
+    type: text_textarea
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sl_match_moments_player:
+    type: entity_reference_autocomplete
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  field_sl_match_moments_time:
+    weight: 2
+    type: string_textfield
+    settings:
+      size: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

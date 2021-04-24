@@ -1,0 +1,11 @@
+uuid: cd0dcb33-12db-4b87-99a7-9852043f3f5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.sl_match_moments
+_core:
+  default_config_hash: 48piS5YfKoQZfF-QQavSo5oKDPnH1yCsYXMBHVCYAxM
+type: sl_match_moments_goal
+name: Goal
+description: Goal

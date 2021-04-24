@@ -1,0 +1,23 @@
+uuid: 9d12121c-4f89-4087-b928-b783673bbe41
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_transfers.sl_transfers
+    - field.storage.sl_transfers.field_sl_transfer_value
+  module:
+    - text
+_core:
+  default_config_hash: D6D-NcuoyPFGZIwbytMaM15t7JYGcVZZRAbpVIszIKQ
+id: sl_transfers.sl_transfers.field_sl_transfer_value
+field_name: field_sl_transfer_value
+entity_type: sl_transfers
+bundle: sl_transfers
+label: Value
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

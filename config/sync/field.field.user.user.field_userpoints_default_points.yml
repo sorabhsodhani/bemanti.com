@@ -1,0 +1,26 @@
+uuid: 6458a143-40c6-404e-861e-ad4f4bc8047f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_userpoints_default_points
+  module:
+    - user
+_core:
+  default_config_hash: OweShpXSV_IxDEg6CjgxJI1buYueAj45M-ErcaK-qGk
+id: user.user.field_userpoints_default_points
+field_name: field_userpoints_default_points
+entity_type: user
+bundle: user
+label: Points
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,22 @@
+uuid: 481f441f-a9ef-4bf6-bdfa-dd6971c448d3
+langcode: en
+status: true
+dependencies:
+  module:
+    - eck
+_core:
+  default_config_hash: 8paoaMSteAVqG8zDWBEN7UUhgg8To720XhOgKSm4Afk
+id: sl_stats.field_sl_stats_match_wins
+field_name: field_sl_stats_match_wins
+entity_type: sl_stats
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

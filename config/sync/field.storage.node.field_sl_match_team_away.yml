@@ -1,0 +1,21 @@
+uuid: a42d7d72-75dd-45d4-b2bd-6534b0105b08
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: yEiVZ6jBmVJCyJU0bD4rfuwHyt3-oYDabIFWTirbS2A
+id: node.field_sl_match_team_away
+field_name: field_sl_match_team_away
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,34 @@
+uuid: 5f832792-fbe9-4bfe-afeb-db046bfdeaab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_competition
+    - node.type.sl_competition
+    - node.type.sl_competition_edition
+    - node.type.sl_standings
+_core:
+  default_config_hash: mPBeerXzcbdQl_F5DNQ3oV-31ci29Y0-_rUcRYhfhcE
+id: node.sl_standings.field_sl_competition
+field_name: field_sl_competition
+entity_type: node
+bundle: sl_standings
+label: Competition
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sl_competition_edition: sl_competition_edition
+      sl_competition: sl_competition
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 9e719aba-247d-4afc-a5cb-b5bce4204f95
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_rosters.sl_roster_text
+    - field.storage.sl_rosters.field_sl_roster_details
+_core:
+  default_config_hash: fEGGhJovqkC3W4FjPLGzKY2QPl_vcUp6joZO7k1LqeM
+id: sl_rosters.sl_roster_text.field_sl_roster_details
+field_name: field_sl_roster_details
+entity_type: sl_rosters
+bundle: sl_roster_text
+label: Details
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

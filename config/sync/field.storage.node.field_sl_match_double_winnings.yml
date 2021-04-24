@@ -1,0 +1,20 @@
+uuid: c17f0819-9016-4dcb-bcd1-1c9dfe861aac
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_sl_match_double_winnings
+field_name: field_sl_match_double_winnings
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 3
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

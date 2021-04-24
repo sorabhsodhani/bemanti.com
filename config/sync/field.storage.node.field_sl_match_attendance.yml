@@ -1,0 +1,23 @@
+uuid: 0bbe6382-6c28-453a-a1e8-1fb5af6fd1ad
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: dca_HjzV5sS0l_GwiHC3rAbCK0V2bqcmKiImctgE5-g
+id: node.field_sl_match_attendance
+field_name: field_sl_match_attendance
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 19eef129-77ca-4de7-8c33-3aa43135d6c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_match_double_winnings
+    - node.type.sl_match
+id: node.sl_match.field_sl_match_double_winnings
+field_name: field_sl_match_double_winnings
+entity_type: node
+bundle: sl_match
+label: 'Double Winnings'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

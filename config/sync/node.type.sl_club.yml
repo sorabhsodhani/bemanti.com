@@ -1,0 +1,13 @@
+uuid: a2d15685-acc8-45ac-95ab-fef22d9af8b2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: f6BtGBx5AuyKJphrj7wu72BPJA9yqFxnQU9-c-VO9mk
+name: Club
+type: sl_club
+description: 'Defines clubs in Sports League that contain the master data to all teams.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

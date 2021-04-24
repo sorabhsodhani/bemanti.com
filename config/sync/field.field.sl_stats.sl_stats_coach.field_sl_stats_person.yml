@@ -1,0 +1,32 @@
+uuid: 5a3164af-4404-469c-9dd2-147543cec7c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_stats.sl_stats_coach
+    - field.storage.sl_stats.field_sl_stats_person
+    - node.type.sl_person
+_core:
+  default_config_hash: 8SHxV3S2bcM2iWzu9mORDYLgmm7niyM7T11ByC419lE
+id: sl_stats.sl_stats_coach.field_sl_stats_person
+field_name: field_sl_stats_person
+entity_type: sl_stats
+bundle: sl_stats_coach
+label: Person
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sl_person: sl_person
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

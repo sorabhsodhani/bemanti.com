@@ -1,0 +1,22 @@
+uuid: e81fee1e-0354-4941-a75a-1ceefeb1e040
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+_core:
+  default_config_hash: 5OH1PQ_scwzdxbL9PO19iAq4ZzlTUFHKMeDBpHwzyHo
+id: sl_stats.field_sl_stats_yellow_cards
+field_name: field_sl_stats_yellow_cards
+entity_type: sl_stats
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: a00c1e22-323d-4f16-b6cb-e2d69e3ed948
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.transaction.field_userpoints_default_reason
+    - transaction.type.userpoints_default_points
+_core:
+  default_config_hash: 3xKs40ERfvvfRAT_uGWgerFtGld_fjFPBST9OJLKCQc
+id: transaction.userpoints_default_points.field_userpoints_default_reason
+field_name: field_userpoints_default_reason
+entity_type: transaction
+bundle: userpoints_default_points
+label: Reason
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

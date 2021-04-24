@@ -1,0 +1,20 @@
+uuid: 03ac01ce-b3af-4266-a817-3fdefaa49442
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 0s7_rPHdtfxV13lGe5j4azoDmn0T0EJeqZ_bFeBLxww
+id: node.field_sl_person_date_of_birth
+field_name: field_sl_person_date_of_birth
+entity_type: node
+type: timestamp
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

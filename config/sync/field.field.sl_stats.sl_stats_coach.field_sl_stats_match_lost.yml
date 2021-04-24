@@ -1,0 +1,25 @@
+uuid: 1c2cd173-9355-4935-87a3-0c292eb3d4ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_stats.sl_stats_coach
+    - field.storage.sl_stats.field_sl_stats_match_lost
+_core:
+  default_config_hash: qx20AJsuheOMy7DRehlt2KDP4hoyeNJI8xb4sAY7MPU
+id: sl_stats.sl_stats_coach.field_sl_stats_match_lost
+field_name: field_sl_stats_match_lost
+entity_type: sl_stats
+bundle: sl_stats_coach
+label: Lost
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,13 @@
+uuid: c3d87e62-6657-4058-ba31-75caaa821f15
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: VrniIexdgyebjbzrkD2Cm8Lsm4Mgh5sO_BWVkZJMVtA
+name: 'Competition edition'
+type: sl_competition_edition
+description: 'Contains competition editions for Sports League that can have matches.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

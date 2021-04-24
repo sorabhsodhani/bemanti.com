@@ -1,0 +1,25 @@
+uuid: 7e48c0cb-7223-4400-bb13-865f2eef4367
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_archived
+    - node.type.sl_standings
+_core:
+  default_config_hash: O7NT5uK7Tmfpt1KMJeLJ6rv-Z6wbpjfh31fmhkFbAik
+id: node.sl_standings.field_sl_archived
+field_name: field_sl_archived
+entity_type: node
+bundle: sl_standings
+label: Archived
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

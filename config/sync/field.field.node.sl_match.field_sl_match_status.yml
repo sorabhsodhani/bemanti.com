@@ -1,0 +1,23 @@
+uuid: 8d84a904-2fcc-4b8e-88de-02ca00d0c239
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_match_status
+    - node.type.sl_match
+  module:
+    - options
+_core:
+  default_config_hash: yifC57hr1D15S137_CC0AAto_eDJTv01d1-RqJm1YFU
+id: node.sl_match.field_sl_match_status
+field_name: field_sl_match_status
+entity_type: node
+bundle: sl_match
+label: Status
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

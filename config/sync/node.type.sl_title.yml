@@ -1,0 +1,13 @@
+uuid: 671faa31-2796-4e34-84ed-2753d409a9ef
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: wwtpGqJmCE0itPOJZNyjXMD7By0wYq5McCvVrVjv_gs
+name: Title
+type: sl_title
+description: 'Provides titles for competitions in Sports League'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

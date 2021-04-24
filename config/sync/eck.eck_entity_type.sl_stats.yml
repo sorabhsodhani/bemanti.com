@@ -1,0 +1,12 @@
+uuid: bd30554a-0432-4ad4-9c3a-23b00ed259f0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NlwiUzG7yOxbYrPlnz84YsYjnGm8uFeOE_73z5Hf6mE
+id: sl_stats
+label: Stats
+created: null
+changed: null
+uid: null
+title: null

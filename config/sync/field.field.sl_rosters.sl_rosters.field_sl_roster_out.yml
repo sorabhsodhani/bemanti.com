@@ -1,0 +1,21 @@
+uuid: e3454b40-8d3c-4beb-9bd6-71f15b831fac
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_rosters.sl_rosters
+    - field.storage.sl_rosters.field_sl_roster_out
+_core:
+  default_config_hash: dVg3L9c2QIxLu1A7X2G85ccGRA0npRHzcWJNBb1K5Q0
+id: sl_rosters.sl_rosters.field_sl_roster_out
+field_name: field_sl_roster_out
+entity_type: sl_rosters
+bundle: sl_rosters
+label: 'Left match'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

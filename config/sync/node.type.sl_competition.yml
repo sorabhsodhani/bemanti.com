@@ -1,0 +1,13 @@
+uuid: fd991f00-5519-475b-9be8-3003f8b76e4e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: E28pD7voUPWEp3BvfptxSYoppcsQTSUJJJU3BGE5hto
+name: Competition
+type: sl_competition
+description: 'Contains competitions for Sports League that can be instantiated'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

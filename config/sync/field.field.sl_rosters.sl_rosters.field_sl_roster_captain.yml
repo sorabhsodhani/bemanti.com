@@ -1,0 +1,25 @@
+uuid: 6aea971c-1e98-44af-85dc-3977994ae6c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_rosters.sl_rosters
+    - field.storage.sl_rosters.field_sl_roster_captain
+_core:
+  default_config_hash: v1AlMVgmGbkZ2REG9PMXQsnGIm_B67s9lTF3_XKdsaU
+id: sl_rosters.sl_rosters.field_sl_roster_captain
+field_name: field_sl_roster_captain
+entity_type: sl_rosters
+bundle: sl_rosters
+label: Captain
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

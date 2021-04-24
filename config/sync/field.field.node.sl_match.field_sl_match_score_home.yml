@@ -1,0 +1,21 @@
+uuid: 46f88525-57fa-4878-ac61-9eaee326bea9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_match_score_home
+    - node.type.sl_match
+_core:
+  default_config_hash: nAZChn_bTXn9DlVe6rBLQ-5lsV8cLA-4duKj7DjH9Ys
+id: node.sl_match.field_sl_match_score_home
+field_name: field_sl_match_score_home
+entity_type: node
+bundle: sl_match
+label: 'Score home'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

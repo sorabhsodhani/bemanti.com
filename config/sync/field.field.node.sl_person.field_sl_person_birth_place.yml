@@ -1,0 +1,21 @@
+uuid: 92c774b1-b806-4aad-8b35-a5f75aa80c61
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_person_birth_place
+    - node.type.sl_person
+_core:
+  default_config_hash: 0qUlu5q9HGNSTCNweBwaj2Y13_I3bdaEf8I0A-W31d8
+id: node.sl_person.field_sl_person_birth_place
+field_name: field_sl_person_birth_place
+entity_type: node
+bundle: sl_person
+label: 'Birth place'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

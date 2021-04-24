@@ -1,0 +1,22 @@
+uuid: 20411e63-5d46-4325-919f-a527e4a634f0
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+_core:
+  default_config_hash: LfKp0SZqNeYb805yiF9OQSS7MlXU_5e2Vb_1kwy7XCk
+id: node.field_sl_match_home_coach
+field_name: field_sl_match_home_coach
+entity_type: node
+type: entity_reference
+settings:
+  target_type: sl_rosters
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

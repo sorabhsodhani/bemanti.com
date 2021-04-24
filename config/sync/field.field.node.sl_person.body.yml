@@ -1,0 +1,25 @@
+uuid: 9bd198ea-eb4d-4f0f-bc4f-58c05cb704a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sl_person
+  module:
+    - text
+_core:
+  default_config_hash: 4AHR_Ole5ADjR1wKtkYc0FLyHIbyw6ne9NaooVhIDmM
+id: node.sl_person.body
+field_name: body
+entity_type: node
+bundle: sl_person
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

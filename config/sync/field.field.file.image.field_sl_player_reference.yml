@@ -1,0 +1,33 @@
+uuid: b3b0d87b-fef6-4289-8768-b66a9e9f38fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.file.field_sl_player_reference
+    - node.type.sl_person
+  module:
+    - file
+_core:
+  default_config_hash: mBbm0ahJRxoTG9matsGLbIbX_1DPogjs9K6fr5xTxcI
+id: file.image.field_sl_player_reference
+field_name: field_sl_player_reference
+entity_type: file
+bundle: image
+label: 'About player'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sl_person: sl_person
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

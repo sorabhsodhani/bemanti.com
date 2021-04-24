@@ -1,0 +1,20 @@
+uuid: 28fd8db6-02fd-4417-ac65-8a1b69689fb1
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 0jN0bBNLOD8zwr143A_3QJML9TFHuY9ftzWZaBzy7d0
+id: node.field_sl_person_date_of_death
+field_name: field_sl_person_date_of_death
+entity_type: node
+type: timestamp
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

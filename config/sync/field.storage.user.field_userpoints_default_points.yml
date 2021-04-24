@@ -1,0 +1,25 @@
+uuid: 63c5cfa2-fdbe-47a1-9268-090c9932fcd3
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - userpoints_default
+  module:
+    - user
+_core:
+  default_config_hash: tu385I9NXTRbAPjFvqe5R8K_aQz6TZGjB6wKh8773ak
+id: user.field_userpoints_default_points
+field_name: field_userpoints_default_points
+entity_type: user
+type: decimal
+settings:
+  precision: 10
+  scale: 0
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

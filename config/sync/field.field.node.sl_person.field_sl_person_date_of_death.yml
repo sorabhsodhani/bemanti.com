@@ -1,0 +1,21 @@
+uuid: 6a6c9775-4abf-4af1-9e80-63419b39b26e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_person_date_of_death
+    - node.type.sl_person
+_core:
+  default_config_hash: nTtiN2bGZh0ELXGwmb85aZ1CvgWapnrJ6JVKqMIFVoI
+id: node.sl_person.field_sl_person_date_of_death
+field_name: field_sl_person_date_of_death
+entity_type: node
+bundle: sl_person
+label: 'Date of death'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

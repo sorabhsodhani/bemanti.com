@@ -1,0 +1,25 @@
+uuid: a412cee2-a3f1-4492-8503-2ea2098b094c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_archived
+    - node.type.sl_competition
+_core:
+  default_config_hash: 1zTO2W_3lQsDZhDBzdNJIxsF4fsNVyxM2LzoP30hY7U
+id: node.sl_competition.field_sl_archived
+field_name: field_sl_archived
+entity_type: node
+bundle: sl_competition
+label: Archived
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

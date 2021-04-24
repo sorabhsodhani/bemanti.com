@@ -1,0 +1,22 @@
+uuid: 7f77f1c9-dc42-4942-9fcb-2bda8385ad4d
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+_core:
+  default_config_hash: La5PE5I-FAMyckPjbHQUaLm7S_MhqCrab7MiDSQyd6A
+id: sl_stats.field_sl_stats_minutes
+field_name: field_sl_stats_minutes
+entity_type: sl_stats
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

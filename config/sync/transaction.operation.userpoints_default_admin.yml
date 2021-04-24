@@ -1,0 +1,14 @@
+uuid: 6f9b5814-f9a8-4153-93d4-c326cd4bee4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - transaction.type.userpoints_default_points
+_core:
+  default_config_hash: 6vxpo18_dhUJvlXLLQ8tl9O3k3MUT_vAAAFLx2wjfio
+id: userpoints_default_admin
+label: Admin
+transaction_type: userpoints_default_points
+description: 'Administrative adjustment by [transaction:uid]'
+details:
+  - '[transaction:field_userpoints_default_linkref]'

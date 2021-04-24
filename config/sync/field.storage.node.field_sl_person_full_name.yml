@@ -1,0 +1,23 @@
+uuid: 36a98eee-4a2a-4f6e-8212-4e32310fef70
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: LZedT1mKDvlrKyI2l4ujqbdRPD-SgI2nuBHQs7N07gA
+id: node.field_sl_person_full_name
+field_name: field_sl_person_full_name
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

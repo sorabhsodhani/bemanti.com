@@ -1,0 +1,23 @@
+uuid: dc3f18f8-f66d-4156-aa4b-aff92426857f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lAbwP79FQqenmjd2l3U9Z0sElGpQm0fMBxK9puGm4yE
+id: node.field_sl_match_score_home
+field_name: field_sl_match_score_home
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

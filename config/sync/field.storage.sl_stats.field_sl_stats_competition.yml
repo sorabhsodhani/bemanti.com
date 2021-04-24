@@ -1,0 +1,22 @@
+uuid: 33113553-dff6-4743-8e6d-2162d68c5f43
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+_core:
+  default_config_hash: vNlvgtbAbRjq6MkJ3t_Z1i118u_-MM6TxRc4_YV4CJ4
+id: sl_stats.field_sl_stats_competition
+field_name: field_sl_stats_competition
+entity_type: sl_stats
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

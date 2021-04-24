@@ -1,0 +1,22 @@
+uuid: c8502da8-fe6c-4b5a-b201-dab846f36c9c
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+_core:
+  default_config_hash: LdYh9SoRPVndzWpBGsjEaJue3R7ELcsX5BEILpkggUc
+id: sl_standings_rosters.field_sl_standings_points
+field_name: field_sl_standings_points
+entity_type: sl_standings_rosters
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

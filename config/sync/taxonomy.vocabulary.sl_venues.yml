@@ -1,0 +1,10 @@
+uuid: 8952c338-ac39-467b-9324-61486bc97589
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Wsh0jXTH-ljom-Ds2CPZXjY_z8jpjqKYq36WMHjXSaQ
+name: 'Sports League venues'
+vid: sl_venues
+description: ''
+weight: 0

@@ -1,0 +1,25 @@
+uuid: 695de392-2e68-4873-a8ab-972f12e6a9e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_stats.sl_stats_coach
+    - field.storage.sl_stats.field_sl_stats_match_draws
+_core:
+  default_config_hash: mqkIgHMd0RcJ2LhBxm8HCIv5et6PpIL4qhbZW6sM78I
+id: sl_stats.sl_stats_coach.field_sl_stats_match_draws
+field_name: field_sl_stats_match_draws
+entity_type: sl_stats
+bundle: sl_stats_coach
+label: Draws
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

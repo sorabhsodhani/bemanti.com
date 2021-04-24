@@ -1,0 +1,33 @@
+uuid: e5febdf8-1e18-4c49-bafd-eef27b33756b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_match_team_home
+    - node.type.sl_match
+    - node.type.sl_team
+_core:
+  default_config_hash: aSBt7lDQzL7mcvlexBgQKk0a7Mh_BPT2wPAFaNL3-9Y
+id: node.sl_match.field_sl_match_team_home
+field_name: field_sl_match_team_home
+entity_type: node
+bundle: sl_match
+label: 'Home team'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    behaviors:
+      views-select-list:
+        status: 0
+    sort:
+      field: _none
+      direction: ASC
+    target_bundles:
+      sl_squad: sl_squad
+      sl_team: sl_team
+field_type: entity_reference

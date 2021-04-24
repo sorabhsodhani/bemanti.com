@@ -1,0 +1,10 @@
+uuid: ce223ac6-d674-4431-b5fb-6597242e8e63
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lTaIWmMcE_Tk8pnd1ax4fisE3sMwC92aHy5PglKvChE
+name: 'Sports League categories'
+vid: sl_categories
+description: ''
+weight: 0

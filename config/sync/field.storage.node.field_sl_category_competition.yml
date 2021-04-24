@@ -1,0 +1,22 @@
+uuid: a9702ad3-4f82-4cb3-920d-a764bcd99e2b
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: tdXPQv-N_Ga9c8leLuo1ThY63HH4VL8JmlR01LDTJsw
+id: node.field_sl_category_competition
+field_name: field_sl_category_competition
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

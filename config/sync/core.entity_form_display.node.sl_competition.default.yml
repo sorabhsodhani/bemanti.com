@@ -1,0 +1,108 @@
+uuid: 29b1f626-bae6-4707-9eae-e94611d24fe4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sl_competition.body
+    - field.field.node.sl_competition.field_sl_administrative_title
+    - field.field.node.sl_competition.field_sl_archived
+    - field.field.node.sl_competition.field_sl_categories
+    - field.field.node.sl_competition.field_sl_category_competition
+    - field.field.node.sl_competition.field_sl_image
+    - image.style.thumbnail
+    - node.type.sl_competition
+  module:
+    - image
+    - path
+    - shs
+    - text
+_core:
+  default_config_hash: 3ryDUxQ-sW0i0N3FVTtseTRWFJz9ycLcalj-RDavvBI
+id: node.sl_competition.default
+targetEntityType: node
+bundle: sl_competition
+mode: default
+content:
+  body:
+    weight: 4
+    type: text_textarea_with_summary
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sl_categories:
+    type: options_shs
+    weight: 1
+    settings:
+      display_node_count: false
+      create_new_items: false
+      create_new_levels: false
+      force_deepest: false
+    third_party_settings: {  }
+    region: content
+  field_sl_image:
+    type: image_image
+    weight: 2
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  path:
+    type: path
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    third_party_settings: {  }
+    region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    third_party_settings: {  }
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_sl_administrative_title: true
+  field_sl_archived: true
+  field_sl_category_competition: true

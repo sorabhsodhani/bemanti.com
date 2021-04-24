@@ -1,0 +1,81 @@
+uuid: 2a2a6955-5e0f-44c8-80a0-21482d6bade7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.transaction.field_userpoints_default_linkref
+    - transaction.type.userpoints_default_points
+  module:
+    - dynamic_entity_reference
+_core:
+  default_config_hash: RhsSgvpacI1-DhBgsNDB-vI1Teqk5AlS0gLqhIY3J0U
+id: transaction.userpoints_default_points.field_userpoints_default_linkref
+field_name: field_userpoints_default_linkref
+entity_type: transaction
+bundle: userpoints_default_points
+label: Reference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  user:
+    handler: 'default:user'
+    handler_settings:
+      include_anonymous: true
+      filter:
+        type: _none
+      target_bundles: null
+      sort:
+        field: _none
+      auto_create: false
+  comment:
+    handler: 'default:comment'
+    handler_settings: {  }
+  contact_message:
+    handler: 'default:contact_message'
+    handler_settings: {  }
+  node:
+    handler: 'default:node'
+    handler_settings: {  }
+  block_content:
+    handler: 'default:block_content'
+    handler_settings: {  }
+  menu_link_content:
+    handler: 'default:menu_link_content'
+    handler_settings: {  }
+  file:
+    handler: 'default:file'
+    handler_settings: {  }
+  sl_match_moments:
+    handler: 'default:sl_match_moments'
+    handler_settings: {  }
+  sl_rosters:
+    handler: 'default:sl_rosters'
+    handler_settings: {  }
+  shortcut:
+    handler: 'default:shortcut'
+    handler_settings: {  }
+  sl_standings_rosters:
+    handler: 'default:sl_standings_rosters'
+    handler_settings: {  }
+  sl_stats:
+    handler: 'default:sl_stats'
+    handler_settings: {  }
+  taxonomy_term:
+    handler: 'default:taxonomy_term'
+    handler_settings: {  }
+  transaction:
+    handler: 'default:transaction'
+    handler_settings: {  }
+  sl_transfers:
+    handler: 'default:sl_transfers'
+    handler_settings: {  }
+  path_alias:
+    handler: 'default:path_alias'
+    handler_settings: {  }
+  bemanti_user_bet_entity:
+    handler: 'default:bemanti_user_bet_entity'
+    handler_settings: {  }
+field_type: dynamic_entity_reference

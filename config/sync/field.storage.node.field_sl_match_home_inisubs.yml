@@ -1,0 +1,22 @@
+uuid: 2024bf7b-7638-491d-af03-e6a757dc7142
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+_core:
+  default_config_hash: 17U2mm4lpeMsyIP3BwSwrSIWneoQLtm35z_-QXaPBD0
+id: node.field_sl_match_home_inisubs
+field_name: field_sl_match_home_inisubs
+entity_type: node
+type: entity_reference
+settings:
+  target_type: sl_rosters
+module: core
+locked: false
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

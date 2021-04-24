@@ -1,0 +1,21 @@
+uuid: c179d29a-bcc2-465c-b181-2df67c74fa91
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_match_moments.sl_match_moments_yellow_card
+    - field.storage.sl_match_moments.field_sl_match_moments_time
+_core:
+  default_config_hash: '-ts61fB1Pcg1sItyzyG2DEPuieffA9tdMYPqI1Y5Bnw'
+id: sl_match_moments.sl_match_moments_yellow_card.field_sl_match_moments_time
+field_name: field_sl_match_moments_time
+entity_type: sl_match_moments
+bundle: sl_match_moments_yellow_card
+label: Time
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

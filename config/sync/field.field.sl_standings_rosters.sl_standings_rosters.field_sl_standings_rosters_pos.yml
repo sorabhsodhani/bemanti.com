@@ -1,0 +1,25 @@
+uuid: b288e974-f255-4cf7-bc0c-48509a6ab93b
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_standings_rosters.sl_standings_rosters
+    - field.storage.sl_standings_rosters.field_sl_standings_rosters_pos
+_core:
+  default_config_hash: '-avglPNGQFTwqw8VBZZbtoSX15oJE0em7kEESZjcd4E'
+id: sl_standings_rosters.sl_standings_rosters.field_sl_standings_rosters_pos
+field_name: field_sl_standings_rosters_pos
+entity_type: sl_standings_rosters
+bundle: sl_standings_rosters
+label: Position
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  max: null
+  min: null
+  prefix: ''
+  suffix: ''
+field_type: integer

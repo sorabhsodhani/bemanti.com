@@ -1,0 +1,21 @@
+uuid: b34772a4-3a03-47ad-b91c-072a799a1de0
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 4UesDyNOUDFchma3Plv3BRB9kLD7M94yDkUgU46P_DQ
+id: node.field_sl_competition
+field_name: field_sl_competition
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: efffa2d2-6f46-454b-8edb-97c3900b3924
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: uSS9CtXvKrjfT7iWFmfcG4hDwcfjbRrfS4xl6298pRQ
+id: node.field_sl_venue
+field_name: field_sl_venue
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 6fa96be9-6c63-473c-b0d9-1d9b4e0fb58d
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - userpoints_default
+  module:
+    - user
+    - userpoints
+_core:
+  default_config_hash: bg6Rl3axCbMJ5sAzWSmICN3actDkzwWK-W52zgbnJ5w
+id: userpoints_default_points
+label: Points
+target_entity_type: user
+transactor:
+  id: userpoints
+  settings:
+    roles: ''
+    amount: field_userpoints_default_amount
+    balance: field_userpoints_default_balance
+    log_message: field_userpoints_default_reason
+    target_balance: field_userpoints_default_points
+bundles: {  }
+options: {  }

@@ -1,0 +1,22 @@
+uuid: 3ccf6b06-a7e3-431a-8ef4-687727a3ea98
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+_core:
+  default_config_hash: dp6neBkd1VJT7VxmHckNQLtQeyFZFfnzLGNpBpI4wjc
+id: sl_standings_rosters.field_sl_standings_rosters_pos
+field_name: field_sl_standings_rosters_pos
+entity_type: sl_standings_rosters
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

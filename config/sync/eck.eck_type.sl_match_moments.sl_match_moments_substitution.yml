@@ -1,0 +1,11 @@
+uuid: 3dd3703b-dccd-492a-bc1e-295bf0a01eff
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.sl_match_moments
+_core:
+  default_config_hash: '-bDlRfPuX7IhzzEZ24uIS8Gm9llBoZ-khRfJQEAvv20'
+type: sl_match_moments_substitution
+name: Substitution
+description: Substitution

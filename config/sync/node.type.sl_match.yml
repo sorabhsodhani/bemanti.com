@@ -1,0 +1,20 @@
+uuid: 1668626c-6519-4268-8cf2-b258735ee91f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: 3Rd2mIsItFp_4-neAks1ozoKT-yInY9J8itBQ0L-8KA
+name: Match
+type: sl_match
+description: 'Provides matches to be used in Sports League.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,30 @@
+uuid: 56c8cac4-3753-41b2-b5d7-2e2499fe99ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_stats.sl_stats_player
+    - field.storage.sl_stats.field_sl_stats_competition
+    - node.type.sl_competition_edition
+_core:
+  default_config_hash: QoEDOlLHwtNrTHH6Ppnb8Kwr20Tz5gNvHdHDO7GXt1E
+id: sl_stats.sl_stats_player.field_sl_stats_competition
+field_name: field_sl_stats_competition
+entity_type: sl_stats
+bundle: sl_stats_player
+label: Competition
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sl_competition_edition: sl_competition_edition
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

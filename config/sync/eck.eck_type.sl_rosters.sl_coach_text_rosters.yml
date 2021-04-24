@@ -1,0 +1,11 @@
+uuid: f98f5732-8410-4694-9519-5128e5645fbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.sl_rosters
+_core:
+  default_config_hash: 7_o177Cow9VRUxT8HSbkGaL-s4jphMp0bYkyAlIq5og
+type: sl_coach_text_rosters
+name: 'Coach Text Roster'
+description: 'Coach Text Roster'

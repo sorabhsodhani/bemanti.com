@@ -1,0 +1,21 @@
+uuid: b6ebeb64-f6f2-4296-8c84-532a93dc3473
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: L4xENEmktUP04iwwi1FAyyJcBY9cbpfymBgFQNv1COA
+id: node.field_sl_match_mvp
+field_name: field_sl_match_mvp
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

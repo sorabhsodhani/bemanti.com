@@ -1,0 +1,23 @@
+uuid: 10f0c68d-7422-4078-a955-a859a8bff8b8
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: cccnMgwcPEvk_Ugh2iivNprseKbR2oe4xEaQDZsNB5M
+id: node.field_sl_administrative_title
+field_name: field_sl_administrative_title
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

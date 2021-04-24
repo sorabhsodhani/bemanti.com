@@ -1,0 +1,25 @@
+uuid: 2789daa0-7d82-4229-b6ed-576a1393667c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_person_number
+    - node.type.sl_person
+_core:
+  default_config_hash: BwBJ7t55yAa3J8If0I6jWvc40C1sA_36iXCj-lwQRME
+id: node.sl_person.field_sl_person_number
+field_name: field_sl_person_number
+entity_type: node
+bundle: sl_person
+label: Number
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  max: null
+  min: null
+  prefix: ''
+  suffix: ''
+field_type: integer

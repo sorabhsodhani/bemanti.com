@@ -1,0 +1,25 @@
+uuid: ca43a537-7a5c-4a96-9b87-24573c4a0601
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sl_archived
+    - node.type.sl_club
+_core:
+  default_config_hash: ktYnHyt2NQTRsXtbXBD0Jsfby5fuxFFC2crAI_Zo8mo
+id: node.sl_club.field_sl_archived
+field_name: field_sl_archived
+entity_type: node
+bundle: sl_club
+label: Archived
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

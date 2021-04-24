@@ -1,0 +1,25 @@
+uuid: d4f496f4-9cd4-48dc-8576-695bf38c95cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_standings_rosters.sl_standings_rosters
+    - field.storage.sl_standings_rosters.field_sl_standings_points
+_core:
+  default_config_hash: EbAM6LV5iuz7BdrTrP_6jYsBaTZhgAd8NtzrRFdYjRI
+id: sl_standings_rosters.sl_standings_rosters.field_sl_standings_points
+field_name: field_sl_standings_points
+entity_type: sl_standings_rosters
+bundle: sl_standings_rosters
+label: Points
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  max: null
+  min: null
+  prefix: ''
+  suffix: ''
+field_type: integer

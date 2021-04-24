@@ -1,0 +1,55 @@
+uuid: 43f4d140-88e6-4d16-a2b4-f66aa3384f38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sl_competition_edition.field_sl_administrative_title
+    - field.field.node.sl_competition_edition.field_sl_archived
+    - field.field.node.sl_competition_edition.field_sl_categories
+    - field.field.node.sl_competition_edition.field_sl_competition
+    - field.field.node.sl_competition_edition.field_sl_image
+    - node.type.sl_competition_edition
+  module:
+    - image
+    - shs
+    - user
+_core:
+  default_config_hash: GmSUzLHis_H6M-p-dM4nsIsYjn4Gb89_g5s1h6OGudk
+id: node.sl_competition_edition.default
+targetEntityType: node
+bundle: sl_competition_edition
+mode: default
+content:
+  field_sl_categories:
+    type: entity_reference_shs
+    weight: 1
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_sl_competition:
+    type: entity_reference_label
+    weight: 2
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_sl_image:
+    type: image
+    weight: 0
+    label: inline
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_sl_administrative_title: true
+  field_sl_archived: true

@@ -1,0 +1,22 @@
+uuid: 2cc19202-d3bd-4f6f-9c49-c529c199c917
+langcode: und
+status: true
+dependencies:
+  module:
+    - eck
+    - node
+_core:
+  default_config_hash: qrRWNPQMsFHGovA6SfQ90Tfzb2AcV1delLK64QrwTrg
+id: node.field_sl_match_away_inisubs
+field_name: field_sl_match_away_inisubs
+entity_type: node
+type: entity_reference
+settings:
+  target_type: sl_rosters
+module: core
+locked: false
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

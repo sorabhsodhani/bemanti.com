@@ -1,0 +1,21 @@
+uuid: ddef6e04-f928-45b7-a6f0-1dec4cc4fb18
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: mhsMWb0GMytWVtZ2JRv624OyqzYJDd7Aria2EhPqe0o
+id: node.field_sl_match_team_home
+field_name: field_sl_match_team_home
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

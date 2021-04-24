@@ -1,0 +1,11 @@
+uuid: 528cd6bc-7857-4adb-87b0-32e0e9b3e099
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_entity_type.sl_rosters
+_core:
+  default_config_hash: UGUCIBGy7AqYMohWXoJIjV4og-6FYFwPIedNeShKoFM
+type: sl_rosters_coach
+name: 'Coach Full Roster'
+description: 'Coach Full Roster'

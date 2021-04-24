@@ -1,0 +1,32 @@
+uuid: 23da48b2-6fef-461f-b5c6-d4039654b320
+langcode: en
+status: true
+dependencies:
+  config:
+    - eck.eck_type.sl_match_moments.sl_match_moments_red_card
+    - field.storage.sl_match_moments.field_sl_match_moments_player
+    - node.type.sl_person
+_core:
+  default_config_hash: Af53CUt_08FoWxKdj7SZxNNO4GniALj38Ee1-qRKeN4
+id: sl_match_moments.sl_match_moments_red_card.field_sl_match_moments_player
+field_name: field_sl_match_moments_player
+entity_type: sl_match_moments
+bundle: sl_match_moments_red_card
+label: Player
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sl_person: sl_person
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

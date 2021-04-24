@@ -1,0 +1,20 @@
+uuid: f40dda1f-becb-40c2-8d5c-8d885b01f878
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: G_8MdajuI4l03yuhk6IJe9MJfOfiBESlyMoLKpg4BWo
+name: Team
+type: sl_team
+description: 'Contains teams to be used in Sports League'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
