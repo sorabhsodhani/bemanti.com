@@ -5,7 +5,6 @@ dependencies:
   config:
     - core.entity_view_mode.user.compact
     - field.field.user.user.field_user_display_name
-    - field.field.user.user.field_user_group
     - field.field.user.user.field_userpoints_default_points
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -30,6 +29,5 @@ content:
     label: hidden
 hidden:
   field_user_display_name: true
-  field_user_group: true
   field_userpoints_default_points: true
   member_for: true

@@ -1,0 +1,7 @@
+services:
+  logger.channel.simple_user_group_tasks:
+    parent: logger.channel_base
+    arguments: ['simple_user_group_tasks']
+  simple_user_group_tasks.core:
+    class: Drupal\simple_user_group_tasks\UserGroupTasksCoreService
+    arguments: []

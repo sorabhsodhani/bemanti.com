@@ -1,0 +1,28 @@
+simple_user_group_tasks.upload_users_form:
+  path: '/user-group/upload-users/{sid}'
+  defaults:
+    _form: '\Drupal\simple_user_group_tasks\Form\UserGroupUploadUsersForm'
+    _title: 'Upload Users'
+  requirements:
+    _access: 'TRUE'
+simple_user_group_tasks.upload_tasks_form:
+  path: '/user-group/upload-tasks/{sid}'
+  defaults:
+    _form: '\Drupal\simple_user_group_tasks\Form\UserGroupUploadTasksForm'
+    _title: 'Upload Tasks'
+  requirements:
+    _access: 'TRUE'
+simple_user_group_tasks.user_group_transaction_pick_form:
+  path: '/user-group/pledge-today/{sid}'
+  defaults:
+    _form: '\Drupal\simple_user_group_tasks\Form\UserGroupTaskPickForm'
+    _title: 'Pick a transaction'
+  requirements:
+    _access: 'TRUE'
+simple_user_group_tasks.test_form:
+  path: '/test-form'
+  defaults:
+    _form: '\Drupal\simple_user_group_tasks\Form\TestForm'
+    _title: 'Pick a transaction'
+  requirements:
+    _access: 'TRUE'

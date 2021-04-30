@@ -1,0 +1,14 @@
+uuid: b02652ef-1a0c-464f-97d2-3adf10fac3c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.user_group_moderator
+  module:
+    - user
+id: user_remove_role_action.user_group_moderator
+label: 'Remove the User Group Moderator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: user_group_moderator

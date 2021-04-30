@@ -1,0 +1,11 @@
+<?php
+
+function simple_user_group_invite_install () {
+  $required_permissions = [
+    'add user group invites entities',
+    'add user groups entities',
+    'edit user group invites entities',
+    'view published user groups entities',
+  ];
+  user_role_grant_permissions('authenticated', $required_permissions);
+}

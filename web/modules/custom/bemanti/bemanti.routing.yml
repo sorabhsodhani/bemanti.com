@@ -5,13 +5,6 @@ bemanti.upload_matches_form:
     _title: 'UploadMatchesForm'
   requirements:
     _role: 'administrator'
-bemanti.user_pick_match_form:
-  path: '/view-today-matches'
-  defaults:
-    _form: '\Drupal\bemanti\Form\UserPickMatchForm'
-    _title: 'UserPickMatchForm'
-  requirements:
-    _role: 'authenticated'
 bemanti.match_bet_slip_form:
   path: '/bet-your-points/{mid}'
   defaults:

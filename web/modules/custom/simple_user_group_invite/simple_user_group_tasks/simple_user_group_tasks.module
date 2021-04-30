@@ -1,0 +1,158 @@
+<?php
+
+/**
+ * @file
+ * Contains simple_user_group_tasks.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\simple_user_group_tasks\UserGroupTasksCoreService;
+use Drupal\simple_user_group_invite\SimpleUserGroupInviteCoreService;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_help().
+ */
+function simple_user_group_tasks_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the simple_user_group_tasks module.
+    case 'help.page.simple_user_group_tasks':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('A module that provides interface to add tasks to user groups') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_entity_update().
+ */
+function simple_user_group_tasks_entity_update(EntityInterface $entity) {
+  // Check if the entity is new.
+  $new_check = $entity->isNew();
+  if (!$new_check) {
+    $entity_original = $entity->original;
+  }
+  $bundle = $entity->bundle();
+  if ($bundle == 'user_group') {
+   $moderator = $entity->user_id->entity;
+   
+   if (isset($entity_original)) {
+    $moderator_original = $entity->original->user_id->entity;
+    if ($moderator->id() != $moderator_original->id()) {
+      $moderator_role_applicable_check = SimpleUserGroupInviteCoreService::isUserModeratorForOtherGroups($moderator_original->id(), $entity->id());
+      if (!$moderator_role_applicable_check) {
+        SimpleUserGroupInviteCoreService::removeUserRole($moderator_original, 'user_group_moderator');
+      }
+    }
+   }
+   $moderator_role_applicable_check = SimpleUserGroupInviteCoreService::isUserModeratorForOtherGroups($moderator->id(), $entity->id());
+   if (!$moderator_role_applicable_check) {
+    SimpleUserGroupInviteCoreService::addUserRole($moderator, 'user_group_moderator');
+   }
+  }
+  
+  else if ($bundle == 'user_tasks_transaction') {
+    $user_field_value = $entity->get('user_task_transaction_user_id')->getValue();
+    $sid_field_value = $entity->get('user_group_id')->getValue();
+    $task_id_field_value = $entity->get('task_id')->getValue();
+    $pledge_status = $entity->get('task_status')->value;
+    $pledge_points = $entity->get('task_stake_points')->value;
+    
+    if (!empty($user_field_value) && !empty($sid_field_value) && !empty($task_id_field_value)) {
+      
+      $uid = $user_field_value[0]['target_id'];
+      $sid = $sid_field_value[0]['target_id'];
+      $task_id = $task_id_field_value[0]['target_id'];
+      
+      $user = User::load($uid);
+      $task = \Drupal\simple_user_group_tasks\Entity\UserTasksEntity::load($task_id);
+      
+      $task_points = $task->get('user_group_task_pointfactor')->value;
+      $amount = 0;
+      if ($pledge_status == 2) {
+        $amount = $task_points * $pledge_points;
+        // Create a society user points entry i.e deduct the stake points.
+        $user_point_entity = Drupal\simple_user_group_points\Entity\UserGroupPointsEntity::create([
+          'name' => $user->getUsername() . ' - ' . $task->getName(),
+          'user_group_id' => $sid,
+          'user_id' => $user->id(),
+          'user_group_points_amount' => $amount,
+          'user_group_transaction_id' => $entity->id(),
+          'user_group_taskid' => $task_id
+        ]);
+      if (!$user_point_entity->save()) {
+        \Drupal::logger('user_group_points')->error('There has been an issue while updating the user uid ' . $user->id() . ' for sid ' . $sid);
+      }
+      }
+      
+      
+    }
+  }
+  
+}
+
+function simple_user_group_tasks_entity_insert(EntityInterface $entity) {
+  $bundle = $entity->bundle();
+   if ($entity->getEntityTypeId()  == 'user_tasks_transaction') {
+    $user_field_value = $entity->get('user_task_transaction_user_id')->getValue();
+    $sid_field_value = $entity->get('user_group_id')->getValue();
+    $task_id_field_value = $entity->get('task_id')->getValue();
+    $pledge_status = $entity->get('task_status')->value;
+    $pledge_points = $entity->get('task_stake_points')->value;
+    
+    if (!empty($user_field_value) && !empty($sid_field_value) && !empty($task_id_field_value)) {
+      
+      $uid = $user_field_value[0]['target_id'];
+      $sid = $sid_field_value[0]['target_id'];
+      $task_id = $task_id_field_value[0]['target_id'];
+      
+      $user = User::load($uid);
+      $task = \Drupal\simple_user_group_tasks\Entity\UserTasksEntity::load($task_id);
+      
+      $task_points = $task->get('user_group_task_pointfactor')->value;
+      $amount = 0;
+      if ($pledge_status == 0) {
+        $amount = -1 * $pledge_points;
+      }
+      
+      
+      // Create a society user points entry i.e deduct the stake points.
+      $user_point_entity = Drupal\simple_user_group_points\Entity\UserGroupPointsEntity::create([
+        'name' => $user->getUsername() . ' - ' . $task->getName(),
+        'user_group_id' => $sid,
+        'user_id' => $user->id(),
+        'user_group_points_amount' => $amount,
+        'user_group_transaction_id' => $entity->id(),
+        'user_group_taskid' => $task_id
+      ]);
+      if ($user_point_entity->save()) {
+        return TRUE;
+      }
+      else {
+        \Drupal::logger('user_group_points')->error('There has been an issue while updating the user uid ' . $user->id() . ' for sid ' . $sid);
+      }
+    }
+   }
+}
+
+function simple_user_group_tasks_entity_presave(EntityInterface $entity) {
+  $bundle = $entity->bundle();
+  
+  if ($bundle == 'user_group_points') {
+    $user_field_value = $entity->get('user_id')->getValue();
+    $sid_field_value = $entity->get('user_group_id')->getValue();
+    if (!empty($user_field_value) && !empty($sid_field_value)) {
+      $uid = $user_field_value[0]['target_id'];
+      $sid = $sid_field_value[0]['target_id'];
+      $user = User::load($uid);
+      $last_balance = \Drupal\simple_user_group_points\SimpleUserGroupPointsService::getUserGroupBalancePoints($user, $sid);
+      $amount = $entity->get('user_group_points_amount')->value;
+      $new_balance = $amount + $last_balance;
+      $entity->set('user_group_points_balance', $new_balance);
+    }
+  }
+}

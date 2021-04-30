@@ -20,3 +20,18 @@ simple_user_group_invite.pending_invites_list:
     _title: 'My Pending Invites'
   requirements:
     _role: 'authenticated'
+
+simple_user_group_invite.ugi_autocomplete_usergroupsbyuserid:
+  path: '/user-group-invite/autocomplete/usergroupbyuserid'
+  defaults:
+    _controller: '\Drupal\simple_user_group_invite\Controller\UGIAutocompleteController::usergroupsbyuserid'
+    _format: json
+  requirements:
+    _role: 'authenticated'
+simple_user_group_invite.ugi_autocomplete_usersexcludingcurrentloggedin:
+  path: '/user-group-invite/autocomplete/usersexcludingloggedin'
+  defaults:
+    _controller: '\Drupal\simple_user_group_invite\Controller\UGIAutocompleteController::usersexcludingcurrentloggedin'
+    _format: json
+  requirements:
+   _role: 'authenticated'

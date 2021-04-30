@@ -1,0 +1,27 @@
+uuid: 33020689-2180-41f4-97f5-1caa54222c9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_associated_societies
+  module:
+    - user
+    - simple_user_group_invite
+id: user.user.field_user_associated_societies
+field_name: field_user_associated_societies
+entity_type: user
+bundle: user
+label: 'Associated Societies'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user_group'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

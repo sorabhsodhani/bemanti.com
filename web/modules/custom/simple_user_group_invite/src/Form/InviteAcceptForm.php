@@ -124,7 +124,7 @@ class InviteAcceptForm extends FormBase {
       $moduleHandler = \Drupal::service('module_handler');
       if ($moduleHandler->moduleExists('simple_user_group_points')) {
         $user_points_service = \Drupal::service("simple_user_group_points.default");
-        $user_points_service->updateSocietyUserPoints($user_data, $group_id, 'register');
+        $user_points_service->updateUserGroupPoints($user_data, $group_id, 'register');
       }
       $response->addCommand(new AlertCommand('Added to the group Successfully!'));
       $response->addCommand(new HtmlCommand('#' . $invite_wrapper, '<div></div>'));

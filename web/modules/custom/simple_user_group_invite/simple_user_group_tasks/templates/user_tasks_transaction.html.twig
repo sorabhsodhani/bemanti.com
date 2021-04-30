@@ -1,0 +1,22 @@
+{#
+/**
+ * @file user_tasks_transaction.html.twig
+ * Default theme implementation to present User Tasks Transaction data.
+ *
+ * This template is used when viewing User Tasks Transaction pages.
+ *
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_user_tasks_transaction()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes.addClass('user_tasks_transaction') }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</div>

@@ -40,14 +40,17 @@ class UserBetMatchesListController extends ControllerBase {
     $match_query->condition('field_sl_match_date', time(), '>=');
     $match_list = $match_query->execute();
     foreach ($match_list as $key => $mid) {
-        $build['#match_form_'. $mid] =  \Drupal::formBuilder()->getForm('Drupal\bemanti\Form\UserBetSlipForm', $mid);
+        //$build['#match_form_'. $mid] =  \Drupal::formBuilder()->getForm('Drupal\bemanti\Form\UserBetSlipForm', $mid);
+        $build[] =  \Drupal::formBuilder()->getForm('Drupal\bemanti\Form\UserBetSlipForm', $mid);
       }
-    $build['#theme'] = 'upcoming_matches_bet_slips_list';
+   // $build['#theme'] = 'upcoming_matches_bet_slips_list';
     $build['#cache']['max-age'] = 0;
     \Drupal::service('page_cache_kill_switch')->trigger();
     //$build['#match_form_5'] = \Drupal::formBuilder()->getForm('Drupal\bemanti\Form\UserBetSlipForm', 8);
     //dump($build);exit;
-     return $build;
+    //dump($build);exit; 
+    return $build;
+     
   }
 
 }

@@ -46,6 +46,9 @@ module:
   search: 0
   shortcut: 0
   shs: 0
+  simple_user_group_invite: 0
+  simple_user_group_points: 0
+  simple_user_group_tasks: 0
   sl_admin_ui: 0
   sl_base: 0
   sl_club: 0
@@ -60,6 +63,7 @@ module:
   sl_team: 0
   sl_title: 0
   sl_transfer: 0
+  smtp: 0
   sports_league: 0
   system: 0
   taxonomy: 0

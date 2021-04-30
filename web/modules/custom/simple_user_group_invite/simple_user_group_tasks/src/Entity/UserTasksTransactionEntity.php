@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\simple_user_group_points\Entity;
+namespace Drupal\simple_user_group_tasks\Entity;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Field\BaseFieldDefinition;
@@ -11,34 +11,34 @@ use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\user\UserInterface;
 
 /**
- * Defines the User Group points entity.
+ * Defines the User Tasks Transaction entity.
  *
- * @ingroup simple_user_group_points
+ * @ingroup simple_user_group_tasks
  *
  * @ContentEntityType(
- *   id = "user_group_points",
- *   label = @Translation("User Group points"),
+ *   id = "user_tasks_transaction",
+ *   label = @Translation("User Tasks Transaction"),
  *   handlers = {
  *     "view_builder" = "Drupal\Core\Entity\EntityViewBuilder",
- *     "list_builder" = "Drupal\simple_user_group_points\UserGroupPointsEntityListBuilder",
- *     "views_data" = "Drupal\simple_user_group_points\Entity\UserGroupPointsEntityViewsData",
- *     "translation" = "Drupal\simple_user_group_points\UserGroupPointsEntityTranslationHandler",
+ *     "list_builder" = "Drupal\simple_user_group_tasks\UserTasksTransactionEntityListBuilder",
+ *     "views_data" = "Drupal\simple_user_group_tasks\Entity\UserTasksTransactionEntityViewsData",
+ *     "translation" = "Drupal\simple_user_group_tasks\UserTasksTransactionEntityTranslationHandler",
  *
  *     "form" = {
- *       "default" = "Drupal\simple_user_group_points\Form\UserGroupPointsEntityForm",
- *       "add" = "Drupal\simple_user_group_points\Form\UserGroupPointsEntityForm",
- *       "edit" = "Drupal\simple_user_group_points\Form\UserGroupPointsEntityForm",
- *       "delete" = "Drupal\simple_user_group_points\Form\UserGroupPointsEntityDeleteForm",
+ *       "default" = "Drupal\simple_user_group_tasks\Form\UserTasksTransactionEntityForm",
+ *       "add" = "Drupal\simple_user_group_tasks\Form\UserTasksTransactionEntityForm",
+ *       "edit" = "Drupal\simple_user_group_tasks\Form\UserTasksTransactionEntityForm",
+ *       "delete" = "Drupal\simple_user_group_tasks\Form\UserTasksTransactionEntityDeleteForm",
  *     },
  *     "route_provider" = {
- *       "html" = "Drupal\simple_user_group_points\UserGroupPointsEntityHtmlRouteProvider",
+ *       "html" = "Drupal\simple_user_group_tasks\UserTasksTransactionEntityHtmlRouteProvider",
  *     },
- *     "access" = "Drupal\simple_user_group_points\UserGroupPointsEntityAccessControlHandler",
+ *     "access" = "Drupal\simple_user_group_tasks\UserTasksTransactionEntityAccessControlHandler",
  *   },
- *   base_table = "user_group_points",
- *   data_table = "user_group_points_field_data",
+ *   base_table = "user_tasks_transaction",
+ *   data_table = "user_tasks_transaction_field_data",
  *   translatable = TRUE,
- *   admin_permission = "administer user group points entities",
+ *   admin_permission = "administer user tasks transaction entities",
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "name",
@@ -48,16 +48,16 @@ use Drupal\user\UserInterface;
  *     "published" = "status",
  *   },
  *   links = {
- *     "canonical" = "/admin/structure/user_group_points/{user_group_points}",
- *     "add-form" = "/admin/structure/user_group_points/add",
- *     "edit-form" = "/admin/structure/user_group_points/{user_group_points}/edit",
- *     "delete-form" = "/admin/structure/user_group_points/{user_group_points}/delete",
- *     "collection" = "/admin/structure/user_group_points",
+ *     "canonical" = "/admin/structure/user_tasks_transaction/{user_tasks_transaction}",
+ *     "add-form" = "/admin/structure/user_tasks_transaction/add",
+ *     "edit-form" = "/admin/structure/user_tasks_transaction/{user_tasks_transaction}/edit",
+ *     "delete-form" = "/admin/structure/user_tasks_transaction/{user_tasks_transaction}/delete",
+ *     "collection" = "/admin/structure/user_tasks_transaction",
  *   },
- *   field_ui_base_route = "user_group_points.settings"
+ *   field_ui_base_route = "user_tasks_transaction.settings"
  * )
  */
-class UserGroupPointsEntity extends ContentEntityBase implements UserGroupPointsEntityInterface {
+class UserTasksTransactionEntity extends ContentEntityBase implements UserTasksTransactionEntityInterface {
 
   use EntityChangedTrait;
   use EntityPublishedTrait;
@@ -143,7 +143,7 @@ class UserGroupPointsEntity extends ContentEntityBase implements UserGroupPoints
 
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
-      ->setDescription(t('The user ID of author of the User Group points entity.'))
+      ->setDescription(t('The user ID of author of the User Tasks Transaction entity.'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
@@ -165,61 +165,17 @@ class UserGroupPointsEntity extends ContentEntityBase implements UserGroupPoints
       ])
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
-    $fields['user_group_id'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Associated Group'))
-      ->setDescription(t('The Group ID to which the user points is to be mapped.'))
-      ->setSetting('target_type', 'user_group')
+    
+    $fields['user_task_transaction_user_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('User linked to the task'))
+      ->setDescription(t('User linked to the task.'))
+      ->setRevisionable(TRUE)
+      ->setSetting('target_type', 'user')
       ->setSetting('handler', 'default')
       ->setDisplayOptions('view', [
         'label' => 'hidden',
         'type' => 'author',
         'weight' => 0,
-      ])
-      ->setDisplayOptions('form', [
-        'type' => 'entity_reference_autocomplete',
-        'weight' => -5,
-        'settings' => [
-          'match_operator' => 'CONTAINS',
-          'size' => '60',
-          'autocomplete_type' => 'tags',
-          'placeholder' => '',
-        ],
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-    
-    $fields['user_group_transaction_id'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Associated Transaction'))
-      ->setDescription(t('The transaction ID to which the user points is to be mapped.'))
-      ->setSetting('target_type', 'user_tasks_transaction')
-      ->setSetting('handler', 'default')
-      ->setDisplayOptions('view', [
-        'label' => 'hidden',
-        'type' => 'author',
-        'weight' => $weight++
-      ])
-      ->setDisplayOptions('form', [
-        'type' => 'entity_reference_autocomplete',
-        'weight' => 5,
-        'settings' => [
-          'match_operator' => 'CONTAINS',
-          'size' => '60',
-          'autocomplete_type' => 'tags',
-          'placeholder' => '',
-        ],
-      ])
-      ->setDisplayConfigurable('form', TRUE)
-      ->setDisplayConfigurable('view', TRUE);
-    
-    $fields['user_group_taskid'] = BaseFieldDefinition::create('entity_reference')
-      ->setLabel(t('Associated Task'))
-      ->setDescription(t('The task ID to which the user points is to be mapped.'))
-      ->setSetting('target_type', 'user_tasks')
-      ->setSetting('handler', 'default')
-      ->setDisplayOptions('view', [
-        'label' => 'hidden',
-        'type' => 'author',
-        'weight' => $weight++,
       ])
       ->setDisplayOptions('form', [
         'type' => 'entity_reference_autocomplete',
@@ -236,7 +192,7 @@ class UserGroupPointsEntity extends ContentEntityBase implements UserGroupPoints
     
     $fields['name'] = BaseFieldDefinition::create('string')
       ->setLabel(t('Name'))
-      ->setDescription(t('The name of the User Group points entity.'))
+      ->setDescription(t('The name of the User Tasks Transaction entity.'))
       ->setSettings([
         'max_length' => 50,
         'text_processing' => 0,
@@ -255,49 +211,109 @@ class UserGroupPointsEntity extends ContentEntityBase implements UserGroupPoints
       ->setDisplayConfigurable('view', TRUE)
       ->setRequired(TRUE);
     
-    $fields['user_group_points_amount'] = BaseFieldDefinition::create('decimal')
-      ->setLabel(t('Points that has to be added or deducted'))
-      ->setDescription(t('Points that has to be added or deducted'))
+    $fields['user_group_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Associated Group'))
+      ->setDescription(t('The Group ID to which the user points is to be mapped.'))
+      ->setSetting('target_type', 'user_group')
+      ->setSetting('handler', 'default')
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'author',
+        'weight' => 0,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'entity_reference_autocomplete',
+        'weight' => 5,
+        'settings' => [
+          'match_operator' => 'CONTAINS',
+          'size' => '60',
+          'autocomplete_type' => 'tags',
+          'placeholder' => '',
+        ],
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+    
+    $fields['task_id'] = BaseFieldDefinition::create('entity_reference')
+      ->setLabel(t('Associated Task'))
+      ->setDescription(t('The task ID to which the user points is to be mapped.'))
+      ->setSetting('target_type', 'user_tasks')
+      ->setSetting('handler', 'default')
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'author',
+        'weight' => 0,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'entity_reference_autocomplete',
+        'weight' => 5,
+        'settings' => [
+          'match_operator' => 'CONTAINS',
+          'size' => '60',
+          'autocomplete_type' => 'tags',
+          'placeholder' => '',
+        ],
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayConfigurable('view', TRUE);
+    
+    $fields['task_stake_points'] = BaseFieldDefinition::create('decimal')
+      ->setLabel(t('User points at stake'))
+      ->setDescription(t('User points at stake'))
       ->setDefaultValue(0)
       ->setSettings(array(
-        'precision' => 10,
-        'scale' => 2,
+        'precision' => 15,
+        'scale' => 5,
       ))
       ->setDisplayOptions('view', array(
         'label' => 'above',
         'type' => 'number_decimal',
         'weight' => -5,
       ))
-      ->setDisplayOptions('form', array(
-        'type' => 'number',
-        'weight' => -4,
-      ))
-      ->setRevisionable(TRUE)
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
-
-    $fields['user_group_points_balance'] = BaseFieldDefinition::create('decimal')
-      ->setLabel(t('Balance Points at this transaction'))
-      ->setDescription(t('Balance Points at this transaction'))
+    
+    $fields['task_done_points'] = BaseFieldDefinition::create('decimal')
+      ->setLabel(t('User points gained on completing task'))
+      ->setDescription(t('User points gained on completing task'))
       ->setDefaultValue(0)
       ->setSettings(array(
-        'precision' => 10,
-        'scale' => 2,
+        'precision' => 15,
+        'scale' => 5,
       ))
       ->setDisplayOptions('view', array(
         'label' => 'above',
         'type' => 'number_decimal',
-        'weight' => -4,
+        'weight' => -5,
       ))
-      ->setDisplayOptions('form', array(
-        'type' => 'number',
-        'weight' => -4,
-      ))
-      ->setRevisionable(TRUE)
       ->setDisplayConfigurable('form', TRUE)
       ->setDisplayConfigurable('view', TRUE);
+    
+    $fields['task_status'] = BaseFieldDefinition::create('list_integer')
+      ->setLabel(t('User activity status'))
+      ->setDescription(t('The current status of activity user picked.'))
+      ->setDefaultValue(0)
+      ->setRevisionable(TRUE)
+      ->setSettings([
+        'allowed_values' => [
+          0 => 'Assigned',
+          2 => 'Done',
+          3 => 'Expired'
+        ],
+      ])
+      ->setDisplayOptions('view', [
+        'label' => 'visible',
+        'type' => 'list_default',
+        'weight' => 6,
+      ])
+      ->setDisplayOptions('form', [
+        'type' => 'options_select',
+        'weight' => 6,
+      ])
+      ->setDisplayConfigurable('view', TRUE)
+      ->setDisplayConfigurable('form', TRUE);
 
-    $fields['status']->setDescription(t('A boolean indicating whether the User Group points is published.'))
+    $fields['status']->setDescription(t('A boolean indicating whether the User Tasks Transaction is published.'))
       ->setDisplayOptions('form', [
         'type' => 'boolean_checkbox',
         'weight' => -3,

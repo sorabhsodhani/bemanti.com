@@ -1,0 +1,42 @@
+# User Tasks[D[D[D[D[DGroup Tasks routing definition
+user_tasks.settings_tab:
+  route_name: user_tasks.settings
+  title: 'Settings'
+  base_route: user_tasks.settings
+
+entity.user_tasks.canonical:
+  route_name: entity.user_tasks.canonical
+  base_route: entity.user_tasks.canonical
+  title: 'View'
+
+entity.user_tasks.edit_form:
+  route_name: entity.user_tasks.edit_form
+  base_route: entity.user_tasks.canonical
+  title: 'Edit'
+
+entity.user_tasks.delete_form:
+  route_name:  entity.user_tasks.delete_form
+  base_route:  entity.user_tasks.canonical
+  title: Delete
+  weight: 10
+# User Tasks Transaction routing definition
+user_tasks_transaction.settings_tab:
+  route_name: user_tasks_transaction.settings
+  title: 'Settings'
+  base_route: user_tasks_transaction.settings
+
+entity.user_tasks_transaction.canonical:
+  route_name: entity.user_tasks_transaction.canonical
+  base_route: entity.user_tasks_transaction.canonical
+  title: 'View'
+
+entity.user_tasks_transaction.edit_form:
+  route_name: entity.user_tasks_transaction.edit_form
+  base_route: entity.user_tasks_transaction.canonical
+  title: 'Edit'
+
+entity.user_tasks_transaction.delete_form:
+  route_name:  entity.user_tasks_transaction.delete_form
+  base_route:  entity.user_tasks_transaction.canonical
+  title: Delete
+  weight: 10

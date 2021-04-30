@@ -16,6 +16,47 @@ class SimpleUserGroupInviteCoreService {
   public function __construct() {
 
   }
+  
+  /**
+   * Checks if user is moderator for any other societies.
+   */
+  public static function isUserModeratorForOtherGroups($uid = NULL, $group_id = NULL) {
+    $query = \Drupal::entityQuery('user_group')
+      ->condition('user_id', $uid)
+      ->condition('id', $group_id, '!=')
+      ->execute(); 
+    if (!empty($query)) {
+      return TRUE;
+    }
+    return FALSE;
+  }
+  
+  /**
+   * Removes a role for a given user.
+   */
+  public static function removeUserRole ($user = NULL, $role = NULL) {
+    if ($user != NULL && $role != NULL) {
+      $user->removeRole($role);
+      if ($user->save()) {
+        return TRUE;
+      }
+    }
+    return FALSE;
+  }
+  
+  /**
+   * Adds a role for a given user.
+   */
+  public static function addUserRole ($user = NULL, $role = NULL) {
+    if ($user != NULL && $role != NULL) {
+      $user->addRole($role);
+      if ($user->save()) {
+        return TRUE;
+      }
+    }
+    return FALSE;
+  }
+  
 
   public static function saveUserGroupInviteEntity ($user_groups = [], $emails = [], $groupId = NULL, $status = 0) {
     $account = \Drupal::currentUser();

@@ -1,0 +1,14 @@
+uuid: 17af9e56-6428-45e9-827e-71764c335fe3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.user_group_moderator
+  module:
+    - user
+id: user_add_role_action.user_group_moderator
+label: 'Add the User Group Moderator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: user_group_moderator

@@ -1,0 +1,11 @@
+<?php
+
+function simple_user_group_tasks_install () {
+  $required_permissions = [
+    'add user group tasks entities',
+    'edit user group tasks entities',
+    'view published user group tasks entities',
+    'view published user tasks transaction entities'
+  ];
+  user_role_grant_permissions('authenticated', $required_permissions);
+}

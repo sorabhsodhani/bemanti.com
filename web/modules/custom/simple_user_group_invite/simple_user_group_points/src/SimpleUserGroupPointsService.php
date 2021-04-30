@@ -15,7 +15,7 @@ class SimpleUserGroupPointsService {
   public function __construct() {
 
   }
-  public static function updateSocietyUserPoints ($user = NULL, $sid = NULL, $op = 'register', $amount = NULL) {
+  public static function updateUserGroupPoints ($user = NULL, $sid = NULL, $op = 'register', $amount = NULL) {
     if ($op == 'register') {
       $amount = 100;
     }
@@ -34,7 +34,7 @@ class SimpleUserGroupPointsService {
     }
   }
 
-  public static function getSocietyUserBalancePoints($user = NULL, $sid = NULL) {
+  public static function getUserGroupBalancePoints($user = NULL, $sid = NULL) {
     $query = \Drupal::service('entity.query')
       ->get('user_group_points')
       ->condition('user_group_id', $sid)

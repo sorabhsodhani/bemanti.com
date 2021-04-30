@@ -1,0 +1,7 @@
+name: 'User Group Tasks feature'
+type: module
+description: 'A module that provides interface to add tasks to user groups'
+core_version_requirement: ^8.8 || ^9
+package: 'User'
+dependencies:
+  - simple_user_group_invite

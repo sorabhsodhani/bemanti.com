@@ -36,24 +36,16 @@ class UserGroupInviteForm extends FormBase {
       '#attributes' => ['id' => 'invite_gangs'],
     ];
     $form['invite_gangs']['user_group'] = [
-      '#type' => 'entity_autocomplete',
-      '#title' => $this->t('Group'),
+      '#title' => $this->t('Select your group'),
+      '#type' => 'textfield',
       '#weight' => '0',
-      '#target_type' => 'user_group',
-      '#selection_handler' => 'default:user_group_by_owner_id',
-      "#tags" => TRUE,
+      '#autocomplete_route_name' => 'simple_user_group_invite.ugi_autocomplete_usergroupsbyuserid'
     ];
-
     $form['invite_gangs']['username'] = [
-      '#type' => 'entity_autocomplete',
-      '#title' => $this->t('Username'),
+      '#title' => $this->t('Select user names'),
+      '#type' => 'textfield',
       '#weight' => '0',
-      '#selection_handler' => 'default:user_by_name_excluding_current',
-      '#selection_settings' => [
-        'include_anonymous' => FALSE,
-      ],
-      '#target_type' => 'user',
-      "#tags" => TRUE,
+      '#autocomplete_route_name' => 'simple_user_group_invite.ugi_autocomplete_usersexcludingcurrentloggedin'
     ];
     $form['invite_gangs']['list_of_email_addresses'] = [
       '#type' => 'textarea',
@@ -98,20 +90,26 @@ class UserGroupInviteForm extends FormBase {
   public function sendInvite (array &$form,  FormStateInterface &$form_state) {
     $ajax_response = new AjaxResponse();
     $email_addresses = ($form_state->getValue('list_of_email_addresses') != '') ? explode(',', $form_state->getValue('list_of_email_addresses')) : [];
-    $user_names = $form_state->getValue('username');
+    $form_state_user_name = $form_state->getValue('username');
+    
+    $user_names = (is_array($form_state_user_name)) ? $form_state_user_name : 
+      (($form_state_user_name == '') ? [] : [$form_state_user_name]);
     $user_groups = [];
-    $user_group_inputs = $form_state->getValue('user_group');
-
+    $user_group_inputs = (is_array($form_state->getValue('user_group'))) ? $form_state->getValue('user_group') : [$form_state->getValue('user_group')];
+    
     $invite_emails = [];
-    foreach ($user_names  as $user_name_input) {
-      $user_data = User::load($user_name_input['target_id']);
+    foreach ($user_group_inputs as $user_group_input) {
+      preg_match_all('#\((.*?)\)#', $user_group_input, $user_group_match_ids);
+      $user_groups[] = end(end($user_group_match_ids));
+    }
+    \Drupal::logger('form_input')->warning('<pre><code>'. print_r($user_groups, TRUE) .'</code></pre>');
+    foreach ($user_names as $user_name_input) {
+      preg_match_all('#\((.*?)\)#', $user_name_input, $user_name_match_ids);
+      $user_data = User::load(end(end($user_name_match_ids)));
       $temp_email = $user_data->getEmail();
       if ($temp_email != NULL) {
         $invite_emails[] = $temp_email;
       }
-    }
-    foreach ($user_group_inputs as $user_group_input) {
-      $user_groups[] = $user_group_input['target_id'];
     }
     $invite_emails = array_merge($invite_emails, $email_addresses);
     $responses = SimpleUserGroupInviteCoreService::saveUserGroupInviteEntity($user_groups, $invite_emails);

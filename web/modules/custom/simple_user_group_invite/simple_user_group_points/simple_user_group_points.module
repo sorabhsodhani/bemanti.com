@@ -38,7 +38,7 @@ function simple_user_group_points_help($route_name, RouteMatchInterface $route_m
         $uid = $user_field_value[0]['target_id'];
         $sid = $sid_field_value[0]['target_id'];
         $user = User::load($uid);
-        $last_balance = SimpleUserGroupPointsService::getSocietyUserBalancePoints($user, $sid);
+        $last_balance = SimpleUserGroupPointsService::getUserGroupBalancePoints($user, $sid);
         $amount = $entity->get('user_group_points_amount')->value;
         $new_balance = $amount + $last_balance;
         $entity->set('user_group_points_balance', $new_balance);

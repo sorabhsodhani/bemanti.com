@@ -4,4 +4,5 @@ description: 'A module that helps in allocating points per group'
 core_version_requirement: ^8.8 || ^9
 package: 'User'
 dependencies:
-  simple_user_group_invite:simple_user_group_invite
+  - simple_user_group_invite
+  - simple_user_group_tasks

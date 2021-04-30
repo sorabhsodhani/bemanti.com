@@ -1,0 +1,10 @@
+entity.user_tasks.add_form:
+  route_name: entity.user_tasks.add_form
+  title: 'Add User Group Tasks'
+  appears_on:
+    - entity.user_tasks.collection
+entity.user_tasks_transaction.add_form:
+  route_name: entity.user_tasks_transaction.add_form
+  title: 'Add User Tasks Transaction'
+  appears_on:
+    - entity.user_tasks_transaction.collection

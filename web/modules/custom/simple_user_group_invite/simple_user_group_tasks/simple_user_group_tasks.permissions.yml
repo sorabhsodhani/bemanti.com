@@ -1,0 +1,43 @@
+add user group tasks entities:
+  title: 'Create new User Group Tasks entities'
+
+administer user group tasks entities:
+  title: 'Administer User Group Tasks entities'
+  description: 'Allow to access the administration form to configure User Group Tasks entities.'
+  restrict access: true
+
+delete user group tasks entities:
+  title: 'Delete User Group Tasks entities'
+
+edit user group tasks entities:
+  title: 'Edit User Group Tasks entities'
+
+view published user group tasks entities:
+  title: 'View published User Group Tasks entities'
+
+view unpublished user group tasks entities:
+  title: 'View unpublished User Group Tasks entities'
+
+add user tasks transaction entities:
+  title: 'Create new User Tasks Transaction entities'
+
+administer user tasks transaction entities:
+  title: 'Administer User Tasks Transaction entities'
+  description: 'Allow to access the administration form to configure User Tasks Transaction entities.'
+  restrict access: true
+
+delete user tasks transaction entities:
+  title: 'Delete User Tasks Transaction entities'
+
+edit user tasks transaction entities:
+  title: 'Edit User Tasks Transaction entities'
+  
+edit own user group transaction entities:
+  title: 'Edit Own user group transaction entities'    
+
+view published user tasks transaction entities:
+  title: 'View published User Tasks Transaction entities'
+
+view unpublished user tasks transaction entities:
+  title: 'View unpublished User Tasks Transaction entities'
+

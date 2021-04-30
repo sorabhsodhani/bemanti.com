@@ -1,0 +1,28 @@
+
+# User Group Tasks menu items definition
+entity.user_tasks.collection:
+  title: 'User Group Tasks list'
+  route_name: entity.user_tasks.collection
+  description: 'List User Group Tasks entities'
+  parent: system.admin_structure
+  weight: 100
+
+user_tasks.admin.structure.settings:
+  title: 'User Group Tasks settings'
+  description: 'Configure User Group Tasks entities'
+  route_name: user_tasks.settings
+  parent: system.admin_structure
+
+# User Tasks Transaction menu items definition
+entity.user_tasks_transaction.collection:
+  title: 'User Tasks Transaction list'
+  route_name: entity.user_tasks_transaction.collection
+  description: 'List User Tasks Transaction entities'
+  parent: system.admin_structure
+  weight: 100
+
+user_tasks_transaction.admin.structure.settings:
+  title: 'User Tasks Transaction settings'
+  description: 'Configure User Tasks Transaction entities'
+  route_name: user_tasks_transaction.settings
+  parent: system.admin_structure
